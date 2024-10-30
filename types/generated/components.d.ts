@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface MetaFieldsMetaFields extends Struct.ComponentSchema {
+  collectionName: 'components_meta_fields_meta_fields';
+  info: {
+    description: '';
+    displayName: 'Meta Fields';
+  };
+  attributes: {
+    metaDescription: Schema.Attribute.Text;
+    ogSiteName: Schema.Attribute.String;
+    ogTitle: Schema.Attribute.String;
+    ogType: Schema.Attribute.String;
+    ogUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -66,6 +82,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'meta-fields.meta-fields': MetaFieldsMetaFields;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;

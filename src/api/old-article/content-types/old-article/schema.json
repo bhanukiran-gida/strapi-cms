@@ -21,13 +21,29 @@
       "targetField": "title",
       "required": true
     },
-    "body": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.rich-text",
-        "shared.media"
-      ],
-      "required": true
+    "content": {
+      "type": "richtext"
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "postedOn": {
+      "type": "date",
+      "required": true,
+      "default": "2024-10-30"
+    },
+    "timeToRead": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "metaFields": {
+      "displayName": "Meta Fields",
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-fields.meta-fields"
     }
   }
 }

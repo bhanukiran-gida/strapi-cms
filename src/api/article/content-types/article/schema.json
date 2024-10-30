@@ -23,19 +23,19 @@
       "type": "uid",
       "targetField": "title"
     },
-    "body": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.rich-text",
-        "shared.media"
-      ],
-      "required": true
-    },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "articles"
+    },
+    "content": {
+      "type": "blocks"
+    },
+    "metaFields": {
+      "type": "component",
+      "repeatable": true,
+      "component": "meta-fields.meta-fields"
     }
   }
 }
