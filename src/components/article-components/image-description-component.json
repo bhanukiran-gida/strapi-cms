@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_article_components_image_description_components",
+  "info": {
+    "displayName": "Image Description Component"
+  },
+  "options": {},
+  "attributes": {
+    "tittle": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "imageUrl": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

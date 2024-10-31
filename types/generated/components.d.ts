@@ -1,5 +1,95 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ArticleComponentsCollections extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_collections';
+  info: {
+    displayName: 'Collections';
+  };
+  attributes: {
+    categoryName: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ArticleComponentsImageDescriptionComponent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_image_description_components';
+  info: {
+    displayName: 'Image Description Component';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Media<'images' | 'files'>;
+    tittle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ArticleComponentsImageDescriptions
+  extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_image_descriptions';
+  info: {
+    description: '';
+    displayName: 'Image Descriptions';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<
+      'article-components.image-description-component',
+      true
+    >;
+    sectionDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    sectionHeader: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ArticleComponentsRichTextJson extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_rich_text_jsons';
+  info: {
+    description: '';
+    displayName: 'richTextJson';
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    fieldId: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'article-content'>;
+  };
+}
+
+export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_video_urls';
+  info: {
+    displayName: 'videoUrl';
+  };
+  attributes: {
+    videoUrl: Schema.Attribute.Media<'files' | 'videos'>;
+  };
+}
+
+export interface ImageDescriptionsContent extends Struct.ComponentSchema {
+  collectionName: 'components_image_descriptions_contents';
+  info: {
+    description: '';
+    displayName: 'content';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    tittle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ImageDescriptionsImageDescriptions
+  extends Struct.ComponentSchema {
+  collectionName: 'components_image_descriptions_image_descriptions';
+  info: {
+    description: '';
+    displayName: 'imageDescriptions';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'image-descriptions.content', true>;
+    sectionDescription: Schema.Attribute.Text & Schema.Attribute.Required;
+    sectionHeader: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface MetaFieldsMetaFields extends Struct.ComponentSchema {
   collectionName: 'components_meta_fields_meta_fields';
   info: {
@@ -52,6 +142,17 @@ export interface SharedRichText extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedRichTextJson extends Struct.ComponentSchema {
+  collectionName: 'components_shared_rich_text_json_s';
+  info: {
+    description: '';
+    displayName: 'Rich text (json)';
+  };
+  attributes: {
+    content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface SharedSeo extends Struct.ComponentSchema {
   collectionName: 'components_shared_seos';
   info: {
@@ -82,10 +183,18 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'article-components.collections': ArticleComponentsCollections;
+      'article-components.image-description-component': ArticleComponentsImageDescriptionComponent;
+      'article-components.image-descriptions': ArticleComponentsImageDescriptions;
+      'article-components.rich-text-json': ArticleComponentsRichTextJson;
+      'article-components.video-url': ArticleComponentsVideoUrl;
+      'image-descriptions.content': ImageDescriptionsContent;
+      'image-descriptions.image-descriptions': ImageDescriptionsImageDescriptions;
       'meta-fields.meta-fields': MetaFieldsMetaFields;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
+      'shared.rich-text-json': SharedRichTextJson;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
     }

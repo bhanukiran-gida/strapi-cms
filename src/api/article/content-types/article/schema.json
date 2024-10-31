@@ -29,13 +29,46 @@
       "target": "api::author.author",
       "inversedBy": "articles"
     },
-    "content": {
-      "type": "blocks"
-    },
     "metaFields": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "meta-fields.meta-fields"
+    },
+    "timeToRead": {
+      "type": "string"
+    },
+    "articleSummary": {
+      "type": "text"
+    },
+    "articleContent": {
+      "type": "dynamiczone",
+      "components": [
+        "article-components.rich-text-json",
+        "article-components.image-descriptions",
+        "article-components.video-url"
+      ],
+      "required": true
+    },
+    "socialIcons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media",
+      "required": true,
+      "max": 4,
+      "min": 1
+    },
+    "postedOn": {
+      "type": "date"
+    },
+    "relatedArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
     }
   }
 }

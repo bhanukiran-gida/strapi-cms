@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_article_components_video_urls",
+  "info": {
+    "displayName": "videoUrl"
+  },
+  "options": {},
+  "attributes": {
+    "videoUrl": {
+      "allowedTypes": [
+        "files",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

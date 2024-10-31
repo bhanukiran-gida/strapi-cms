@@ -410,8 +410,17 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    articleContent: Schema.Attribute.DynamicZone<
+      [
+        'article-components.rich-text-json',
+        'article-components.image-descriptions',
+        'article-components.video-url',
+      ]
+    > &
+      Schema.Attribute.Required;
+    articleSummary: Schema.Attribute.Text;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
-    content: Schema.Attribute.Blocks;
+    category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -425,9 +434,24 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       'api::article.article'
     > &
       Schema.Attribute.Private;
-    metaFields: Schema.Attribute.Component<'meta-fields.meta-fields', true>;
+    metaFields: Schema.Attribute.Component<'meta-fields.meta-fields', false>;
+    postedOn: Schema.Attribute.Date;
     publishedAt: Schema.Attribute.DateTime;
+    relatedArticles: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    >;
     slug: Schema.Attribute.UID<'title'>;
+    socialIcons: Schema.Attribute.Component<'shared.media', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+          min: 1;
+        },
+        number
+      >;
+    timeToRead: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

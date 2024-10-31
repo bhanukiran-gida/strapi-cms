@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_image_descriptions_image_descriptions",
+  "info": {
+    "displayName": "imageDescriptions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "displayName": "content",
+      "type": "component",
+      "repeatable": true,
+      "component": "image-descriptions.content"
+    },
+    "sectionHeader": {
+      "type": "string",
+      "required": true
+    },
+    "sectionDescription": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
