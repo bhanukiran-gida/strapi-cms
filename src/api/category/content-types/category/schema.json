@@ -20,6 +20,12 @@
     },
     "description": {
       "type": "text"
+    },
+    "old_articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::old-article.old-article",
+      "mappedBy": "category"
     }
   }
 }
