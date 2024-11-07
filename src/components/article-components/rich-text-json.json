@@ -10,9 +10,9 @@
       "type": "blocks",
       "required": true
     },
-    "fieldId": {
+    "type": {
       "type": "string",
-      "default": "article-content",
+      "default": "article-block",
       "required": false
     }
   }

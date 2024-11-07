@@ -13,21 +13,17 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
-    },
-    "author": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::author.author",
-      "inversedBy": "articles"
+      "targetField": "title",
+      "required": true
     },
     "metaFields": {
       "type": "component",
@@ -35,7 +31,8 @@
       "component": "meta-fields.meta-fields"
     },
     "timeToRead": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "articleSummary": {
       "type": "text"
@@ -54,11 +51,12 @@
       "repeatable": true,
       "component": "shared.media",
       "required": true,
-      "max": 4,
+      "max": 5,
       "min": 1
     },
     "postedOn": {
-      "type": "date"
+      "type": "date",
+      "required": true
     },
     "relatedArticles": {
       "type": "relation",
@@ -69,6 +67,41 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
+    },
+    "articleImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "conclusion": {
+      "type": "text",
+      "required": false
+    },
+    "sources": {
+      "type": "blocks"
+    },
+    "quoteBanner": {
+      "displayName": "quoteBanner",
+      "type": "component",
+      "repeatable": false,
+      "component": "article-components.quote-banner"
     }
   }
 }

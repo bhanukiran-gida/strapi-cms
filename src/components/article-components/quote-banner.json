@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_article_components_quote_banners",
+  "info": {
+    "displayName": "quoteBanner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "string",
+      "required": false
+    },
+    "subDescription": {
+      "type": "string",
+      "required": false
+    },
+    "ctaText": {
+      "type": "string"
+    },
+    "quoteBannerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

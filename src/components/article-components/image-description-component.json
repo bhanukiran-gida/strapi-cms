@@ -1,11 +1,12 @@
 {
   "collectionName": "components_article_components_image_description_components",
   "info": {
-    "displayName": "Image Description Component"
+    "displayName": "Image Description Component",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "tittle": {
+    "title": {
       "type": "string",
       "required": true
     },
@@ -14,12 +15,13 @@
       "required": true
     },
     "imageUrl": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

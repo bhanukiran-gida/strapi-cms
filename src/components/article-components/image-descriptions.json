@@ -18,7 +18,12 @@
       "displayName": "Image Description Component",
       "type": "component",
       "repeatable": true,
-      "component": "article-components.image-description-component"
+      "component": "article-components.image-description-component",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "default": "article-grid"
     }
   }
 }

@@ -1,0 +1,48 @@
+{
+  "kind": "singleType",
+  "collectionName": "app_banners",
+  "info": {
+    "singularName": "app-banner",
+    "pluralName": "app-banners",
+    "displayName": "App Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "info": {
+      "type": "string",
+      "required": true
+    },
+    "subInfo": {
+      "type": "string",
+      "required": true
+    },
+    "playStoreImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "appStoreImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "hereAppLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

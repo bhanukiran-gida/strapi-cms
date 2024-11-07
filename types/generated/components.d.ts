@@ -14,12 +14,14 @@ export interface ArticleComponentsImageDescriptionComponent
   extends Struct.ComponentSchema {
   collectionName: 'components_article_components_image_description_components';
   info: {
+    description: '';
     displayName: 'Image Description Component';
   };
   attributes: {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
-    imageUrl: Schema.Attribute.Media<'images' | 'files'>;
-    tittle: Schema.Attribute.String & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -34,9 +36,26 @@ export interface ArticleComponentsImageDescriptions
     content: Schema.Attribute.Component<
       'article-components.image-description-component',
       true
-    >;
+    > &
+      Schema.Attribute.Required;
     sectionDescription: Schema.Attribute.Text & Schema.Attribute.Required;
     sectionHeader: Schema.Attribute.String & Schema.Attribute.Required;
+    type: Schema.Attribute.String & Schema.Attribute.DefaultTo<'article-grid'>;
+  };
+}
+
+export interface ArticleComponentsQuoteBanner extends Struct.ComponentSchema {
+  collectionName: 'components_article_components_quote_banners';
+  info: {
+    description: '';
+    displayName: 'quoteBanner';
+  };
+  attributes: {
+    ctaText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    quoteBannerImage: Schema.Attribute.Media<'images'>;
+    subDescription: Schema.Attribute.String;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -48,18 +67,20 @@ export interface ArticleComponentsRichTextJson extends Struct.ComponentSchema {
   };
   attributes: {
     content: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    fieldId: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'article-content'>;
+    type: Schema.Attribute.String & Schema.Attribute.DefaultTo<'article-block'>;
   };
 }
 
 export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
   collectionName: 'components_article_components_video_urls';
   info: {
+    description: '';
     displayName: 'videoUrl';
   };
   attributes: {
-    videoUrl: Schema.Attribute.Media<'files' | 'videos'>;
+    type: Schema.Attribute.String & Schema.Attribute.DefaultTo<'article-video'>;
+    videoUrl: Schema.Attribute.Media<'files' | 'videos'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -114,7 +135,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
     icon: 'file-video';
   };
   attributes: {
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
+    image: Schema.Attribute.Media<'images'>;
   };
 }
 
@@ -186,6 +207,7 @@ declare module '@strapi/strapi' {
       'article-components.collections': ArticleComponentsCollections;
       'article-components.image-description-component': ArticleComponentsImageDescriptionComponent;
       'article-components.image-descriptions': ArticleComponentsImageDescriptions;
+      'article-components.quote-banner': ArticleComponentsQuoteBanner;
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
       'image-descriptions.content': ImageDescriptionsContent;
