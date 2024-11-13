@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_article_components_collections",
+  "info": {
+    "displayName": "Collections"
+  },
+  "options": {},
+  "attributes": {
+    "categoryName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
