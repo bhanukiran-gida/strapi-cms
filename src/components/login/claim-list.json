@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_login_claim_lists",
+  "info": {
+    "displayName": "claimList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subTitle": {
+      "type": "string"
+    }
+  }
+}

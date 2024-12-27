@@ -111,6 +111,17 @@ export interface ImageDescriptionsImageDescriptions
   };
 }
 
+export interface LoginClaimList extends Struct.ComponentSchema {
+  collectionName: 'components_login_claim_lists';
+  info: {
+    displayName: 'claimList';
+  };
+  attributes: {
+    subTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface MetaFieldsMetaFields extends Struct.ComponentSchema {
   collectionName: 'components_meta_fields_meta_fields';
   info: {
@@ -212,6 +223,7 @@ declare module '@strapi/strapi' {
       'article-components.video-url': ArticleComponentsVideoUrl;
       'image-descriptions.content': ImageDescriptionsContent;
       'image-descriptions.image-descriptions': ImageDescriptionsImageDescriptions;
+      'login.claim-list': LoginClaimList;
       'meta-fields.meta-fields': MetaFieldsMetaFields;
       'shared.media': SharedMedia;
       'shared.quote': SharedQuote;
