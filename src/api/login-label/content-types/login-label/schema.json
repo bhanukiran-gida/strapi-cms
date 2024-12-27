@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "login_labels",
+  "info": {
+    "singularName": "login-label",
+    "pluralName": "login-labels",
+    "displayName": "Login Labels",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "subHeading": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "termsAndConditionText": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "placeholder": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "claimList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "login.claim-list"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageUrlDesktop": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageUrlMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}
