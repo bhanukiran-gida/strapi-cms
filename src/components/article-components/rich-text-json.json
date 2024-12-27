@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_article_components_rich_text_jsons",
+  "info": {
+    "displayName": "richTextJson",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "default": "article-block",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_rich_text_json_s",
+  "info": {
+    "displayName": "Rich text (json)",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

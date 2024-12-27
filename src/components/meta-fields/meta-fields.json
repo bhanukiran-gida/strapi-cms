@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_meta_fields_meta_fields",
+  "info": {
+    "displayName": "Meta Fields",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text"
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogType": {
+      "type": "string"
+    },
+    "ogUrl": {
+      "type": "string"
+    },
+    "ogSiteName": {
+      "type": "string"
+    }
+  }
+}

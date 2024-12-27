@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_article_components_image_descriptions",
+  "info": {
+    "displayName": "Image Descriptions",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionDescription": {
+      "type": "text",
+      "required": true
+    },
+    "sectionHeader": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "displayName": "Image Description Component",
+      "type": "component",
+      "repeatable": true,
+      "component": "article-components.image-description-component",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "default": "article-grid"
+    }
+  }
+}

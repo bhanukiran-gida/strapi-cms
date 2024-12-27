@@ -13,29 +13,95 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text",
-      "maxLength": 80
+      "required": true
     },
     "slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "title",
+      "required": true
     },
-    "body": {
+    "metaFields": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta-fields.meta-fields"
+    },
+    "timeToRead": {
+      "type": "string",
+      "required": true
+    },
+    "articleSummary": {
+      "type": "text"
+    },
+    "articleContent": {
       "type": "dynamiczone",
       "components": [
-        "shared.rich-text",
-        "shared.media"
+        "article-components.rich-text-json",
+        "article-components.image-descriptions",
+        "article-components.video-url"
       ],
       "required": true
+    },
+    "socialIcons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.media",
+      "required": true,
+      "max": 5,
+      "min": 1
+    },
+    "postedOn": {
+      "type": "date",
+      "required": true
+    },
+    "relatedArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "articleImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "audios"
+      ]
     },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "articles"
+    },
+    "conclusion": {
+      "type": "text",
+      "required": false
+    },
+    "sources": {
+      "type": "blocks"
+    },
+    "quoteBanner": {
+      "displayName": "quoteBanner",
+      "type": "component",
+      "repeatable": false,
+      "component": "article-components.quote-banner"
     }
   }
 }
