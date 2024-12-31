@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_bottom_cards",
+  "info": {
+    "displayName": "bottomCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "steps": {
+      "displayName": "steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.steps"
+    },
+    "cta": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "e_kyc_procedures",
+  "info": {
+    "singularName": "e-kyc-procedure",
+    "pluralName": "e-kyc-procedures",
+    "displayName": "e-KYC Procedure",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "banner": {
+      "displayName": "banner",
+      "type": "component",
+      "repeatable": false,
+      "component": "image-descriptions.banner"
+    },
+    "contents": {
+      "displayName": "contents",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.contents"
+    },
+    "bottom": {
+      "displayName": "bottom",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.bottom"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_image_descriptions_banners",
+  "info": {
+    "displayName": "banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "displayName": "title",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.title"
+    },
+    "image": {
+      "displayName": "image",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.image"
+    },
+    "mobileImage": {
+      "displayName": "mobileImage",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.mobile-image"
+    }
+  }
+}

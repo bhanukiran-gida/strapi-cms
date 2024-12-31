@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_shared_steps",
+  "info": {
+    "displayName": "steps"
+  },
+  "options": {},
+  "attributes": {
+    "step": {
+      "type": "string"
+    }
+  }
+}
