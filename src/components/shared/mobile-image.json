@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_shared_mobile_images",
+  "info": {
+    "displayName": "mobileImage"
+  },
+  "options": {},
+  "attributes": {
+    "mobileImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

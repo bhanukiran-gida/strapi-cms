@@ -84,6 +84,18 @@ export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
   };
 }
 
+export interface ImageDescriptionsBanner extends Struct.ComponentSchema {
+  collectionName: 'components_image_descriptions_banners';
+  info: {
+    displayName: 'banner';
+  };
+  attributes: {
+    image: Schema.Attribute.Component<'shared.image', true>;
+    mobileImage: Schema.Attribute.Component<'shared.mobile-image', true>;
+    title: Schema.Attribute.Component<'shared.title', true>;
+  };
+}
+
 export interface ImageDescriptionsContent extends Struct.ComponentSchema {
   collectionName: 'components_image_descriptions_contents';
   info: {
@@ -138,6 +150,62 @@ export interface MetaFieldsMetaFields extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBottom extends Struct.ComponentSchema {
+  collectionName: 'components_shared_bottoms';
+  info: {
+    displayName: 'bottom';
+  };
+  attributes: {
+    bottomCards: Schema.Attribute.Component<'shared.bottom-cards', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedBottomCards extends Struct.ComponentSchema {
+  collectionName: 'components_shared_bottom_cards';
+  info: {
+    displayName: 'bottomCards';
+  };
+  attributes: {
+    cta: Schema.Attribute.String;
+    steps: Schema.Attribute.Component<'shared.steps', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCards extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedContents extends Struct.ComponentSchema {
+  collectionName: 'components_shared_contents';
+  info: {
+    displayName: 'contents';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'shared.cards', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_images';
+  info: {
+    displayName: 'image';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -147,6 +215,18 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface SharedMobileImage extends Struct.ComponentSchema {
+  collectionName: 'components_shared_mobile_images';
+  info: {
+    displayName: 'mobileImage';
+  };
+  attributes: {
+    mobileImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
   };
 }
 
@@ -212,6 +292,28 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSteps extends Struct.ComponentSchema {
+  collectionName: 'components_shared_steps';
+  info: {
+    displayName: 'steps';
+  };
+  attributes: {
+    step: Schema.Attribute.String;
+  };
+}
+
+export interface SharedTitle extends Struct.ComponentSchema {
+  collectionName: 'components_shared_titles';
+  info: {
+    displayName: 'title';
+  };
+  attributes: {
+    center: Schema.Attribute.String;
+    left: Schema.Attribute.String;
+    right: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -221,16 +323,25 @@ declare module '@strapi/strapi' {
       'article-components.quote-banner': ArticleComponentsQuoteBanner;
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
+      'image-descriptions.banner': ImageDescriptionsBanner;
       'image-descriptions.content': ImageDescriptionsContent;
       'image-descriptions.image-descriptions': ImageDescriptionsImageDescriptions;
       'login.claim-list': LoginClaimList;
       'meta-fields.meta-fields': MetaFieldsMetaFields;
+      'shared.bottom': SharedBottom;
+      'shared.bottom-cards': SharedBottomCards;
+      'shared.cards': SharedCards;
+      'shared.contents': SharedContents;
+      'shared.image': SharedImage;
       'shared.media': SharedMedia;
+      'shared.mobile-image': SharedMobileImage;
       'shared.quote': SharedQuote;
       'shared.rich-text': SharedRichText;
       'shared.rich-text-json': SharedRichTextJson;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.steps': SharedSteps;
+      'shared.title': SharedTitle;
     }
   }
 }
