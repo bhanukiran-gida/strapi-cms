@@ -565,39 +565,6 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEKycProcedureEKycProcedure
-  extends Struct.CollectionTypeSchema {
-  collectionName: 'e_kyc_procedures';
-  info: {
-    description: '';
-    displayName: 'e-KYC Procedure';
-    pluralName: 'e-kyc-procedures';
-    singularName: 'e-kyc-procedure';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    banner: Schema.Attribute.Component<'image-descriptions.banner', false>;
-    bottom: Schema.Attribute.Component<'shared.bottom', false>;
-    contents: Schema.Attribute.Component<'shared.contents', true>;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::e-kyc-procedure.e-kyc-procedure'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   collectionName: 'globals';
   info: {
@@ -1224,7 +1191,6 @@ declare module '@strapi/strapi' {
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
-      'api::e-kyc-procedure.e-kyc-procedure': ApiEKycProcedureEKycProcedure;
       'api::global.global': ApiGlobalGlobal;
       'api::login-label.login-label': ApiLoginLabelLoginLabel;
       'api::old-article.old-article': ApiOldArticleOldArticle;
