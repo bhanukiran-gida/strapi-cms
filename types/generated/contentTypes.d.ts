@@ -565,8 +565,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiEKycProcedureEKycProcedure
-  extends Struct.CollectionTypeSchema {
+export interface ApiEKycProcedureEKycProcedure extends Struct.SingleTypeSchema {
   collectionName: 'e_kyc_procedures';
   info: {
     description: '';
