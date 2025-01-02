@@ -26,6 +26,51 @@
       "type": "component",
       "repeatable": true,
       "component": "career.accordion-content"
+    },
+    "ourVisionTitle": {
+      "type": "string"
+    },
+    "ourVisionDescription": {
+      "type": "text"
+    },
+    "ourVisionQuote": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "life": {
+      "displayName": "life",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.life"
+    },
+    "ourValuesTitle": {
+      "type": "string"
+    },
+    "ourValuesDescription": {
+      "type": "text"
+    },
+    "ourValuesImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "seed": {
+      "displayName": "seed",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.seed"
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_tests",
+  "info": {
+    "displayName": "test",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "string": {
+      "type": "string"
+    }
+  }
+}

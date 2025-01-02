@@ -87,11 +87,25 @@ export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
 export interface CareerAccordionContent extends Struct.ComponentSchema {
   collectionName: 'components_career_accordion_contents';
   info: {
+    description: '';
     displayName: 'accordionContent';
   };
   attributes: {
+    description: Schema.Attribute.Component<'career.description', true>;
     header: Schema.Attribute.String;
     image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface CareerCards extends Struct.ComponentSchema {
+  collectionName: 'components_career_cards';
+  info: {
+    displayName: 'cards';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -102,6 +116,75 @@ export interface CareerCareer extends Struct.ComponentSchema {
   };
   attributes: {
     test: Schema.Attribute.String;
+  };
+}
+
+export interface CareerCarousal extends Struct.ComponentSchema {
+  collectionName: 'components_career_carousals';
+  info: {
+    displayName: 'carousal';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerDescription extends Struct.ComponentSchema {
+  collectionName: 'components_career_descriptions';
+  info: {
+    displayName: 'description';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+  };
+}
+
+export interface CareerLife extends Struct.ComponentSchema {
+  collectionName: 'components_career_lives';
+  info: {
+    displayName: 'life';
+  };
+  attributes: {
+    cards: Schema.Attribute.Component<'career.cards', true>;
+    carousal: Schema.Attribute.Component<'career.carousal', true>;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerSeed extends Struct.ComponentSchema {
+  collectionName: 'components_career_seeds';
+  info: {
+    displayName: 'seed';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    seedCards: Schema.Attribute.Component<'career.seed-cards', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerSeedCards extends Struct.ComponentSchema {
+  collectionName: 'components_career_seed_cards';
+  info: {
+    displayName: 'seedCards';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CareerTest extends Struct.ComponentSchema {
+  collectionName: 'components_career_tests';
+  info: {
+    description: '';
+    displayName: 'test';
+  };
+  attributes: {
+    string: Schema.Attribute.String;
   };
 }
 
@@ -356,7 +439,14 @@ declare module '@strapi/strapi' {
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
       'career.accordion-content': CareerAccordionContent;
+      'career.cards': CareerCards;
       'career.career': CareerCareer;
+      'career.carousal': CareerCarousal;
+      'career.description': CareerDescription;
+      'career.life': CareerLife;
+      'career.seed': CareerSeed;
+      'career.seed-cards': CareerSeedCards;
+      'career.test': CareerTest;
       'career.title': CareerTitle;
       'image-descriptions.banner': ImageDescriptionsBanner;
       'image-descriptions.content': ImageDescriptionsContent;

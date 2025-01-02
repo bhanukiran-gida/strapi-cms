@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_career_seeds",
+  "info": {
+    "displayName": "seed"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "seedCards": {
+      "displayName": "seedCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "career.seed-cards"
+    }
+  }
+}

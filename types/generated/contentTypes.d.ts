@@ -550,13 +550,25 @@ export interface ApiCarrerCarrer extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text;
+    life: Schema.Attribute.Component<'career.life', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::carrer.carrer'
     > &
       Schema.Attribute.Private;
+    ourValuesDescription: Schema.Attribute.Text;
+    ourValuesImage: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ourValuesTitle: Schema.Attribute.String;
+    ourVisionDescription: Schema.Attribute.Text;
+    ourVisionQuote: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    ourVisionTitle: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    seed: Schema.Attribute.Component<'career.seed', false>;
     title: Schema.Attribute.Component<'career.title', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -624,6 +636,7 @@ export interface ApiEKycProcedureEKycProcedure extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    testkey: Schema.Attribute.Component<'career.test', true>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
