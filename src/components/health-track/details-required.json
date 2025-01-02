@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_health_track_details_requireds",
+  "info": {
+    "displayName": "detailsRequired",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "detailsDesc": {
+      "type": "text",
+      "required": true
+    },
+    "detailsEmailDesc": {
+      "type": "text",
+      "required": true
+    },
+    "detailsEmail": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
