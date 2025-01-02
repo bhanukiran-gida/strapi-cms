@@ -530,6 +530,40 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCarrerCarrer extends Struct.SingleTypeSchema {
+  collectionName: 'carrers';
+  info: {
+    description: '';
+    displayName: 'Carrer';
+    pluralName: 'carrers';
+    singularName: 'carrer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    accordionContent: Schema.Attribute.Component<
+      'career.accordion-content',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::carrer.carrer'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.Component<'career.title', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
@@ -1222,6 +1256,7 @@ declare module '@strapi/strapi' {
       'api::app-banner.app-banner': ApiAppBannerAppBanner;
       'api::article.article': ApiArticleArticle;
       'api::author.author': ApiAuthorAuthor;
+      'api::carrer.carrer': ApiCarrerCarrer;
       'api::category.category': ApiCategoryCategory;
       'api::e-kyc-procedure.e-kyc-procedure': ApiEKycProcedureEKycProcedure;
       'api::global.global': ApiGlobalGlobal;

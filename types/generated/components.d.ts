@@ -84,6 +84,38 @@ export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
   };
 }
 
+export interface CareerAccordionContent extends Struct.ComponentSchema {
+  collectionName: 'components_career_accordion_contents';
+  info: {
+    displayName: 'accordionContent';
+  };
+  attributes: {
+    header: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface CareerCareer extends Struct.ComponentSchema {
+  collectionName: 'components_career_careers';
+  info: {
+    displayName: 'Career';
+  };
+  attributes: {
+    test: Schema.Attribute.String;
+  };
+}
+
+export interface CareerTitle extends Struct.ComponentSchema {
+  collectionName: 'components_career_titles';
+  info: {
+    displayName: 'title';
+  };
+  attributes: {
+    left: Schema.Attribute.String;
+    right: Schema.Attribute.String;
+  };
+}
+
 export interface ImageDescriptionsBanner extends Struct.ComponentSchema {
   collectionName: 'components_image_descriptions_banners';
   info: {
@@ -323,6 +355,9 @@ declare module '@strapi/strapi' {
       'article-components.quote-banner': ArticleComponentsQuoteBanner;
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
+      'career.accordion-content': CareerAccordionContent;
+      'career.career': CareerCareer;
+      'career.title': CareerTitle;
       'image-descriptions.banner': ImageDescriptionsBanner;
       'image-descriptions.content': ImageDescriptionsContent;
       'image-descriptions.image-descriptions': ImageDescriptionsImageDescriptions;

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_career_accordion_contents",
+  "info": {
+    "displayName": "accordionContent"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "header": {
+      "type": "string"
+    }
+  }
+}
