@@ -84,6 +84,167 @@ export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
   };
 }
 
+export interface HealthTrackAddDocumentCard extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_add_document_cards';
+  info: {
+    description: '';
+    displayName: 'addDocumentCard';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackDetailsRequired extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_details_requireds';
+  info: {
+    description: '';
+    displayName: 'detailsRequired';
+  };
+  attributes: {
+    detailsDesc: Schema.Attribute.Text & Schema.Attribute.Required;
+    detailsEmail: Schema.Attribute.Email & Schema.Attribute.Required;
+    detailsEmailDesc: Schema.Attribute.Text & Schema.Attribute.Required;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackErrorEncountered extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_error_encountereds';
+  info: {
+    description: '';
+    displayName: 'errorEncountered';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    queryText: Schema.Attribute.Component<'health-track.query-text', false> &
+      Schema.Attribute.Required;
+    subtitle: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackNoClaimFound extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_no_claim_founds';
+  info: {
+    description: '';
+    displayName: 'noClaimFound';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    description2: Schema.Attribute.Text & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    queryText: Schema.Attribute.Component<'health-track.query-text', false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackQueryText extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_query_texts';
+  info: {
+    description: '';
+    displayName: 'queryText';
+  };
+  attributes: {
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackShowDocumentsCard extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_show_documents_cards';
+  info: {
+    description: '';
+    displayName: 'showDocumentsCard';
+  };
+  attributes: {
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackSupplementaryCard extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_supplementary_cards';
+  info: {
+    description: '';
+    displayName: 'supplementaryCard';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String & Schema.Attribute.Required;
+    description: Schema.Attribute.String & Schema.Attribute.Required;
+    imageUrl: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackTrackAClaim extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_track_a_claims';
+  info: {
+    description: '';
+    displayName: 'trackAClaim';
+  };
+  attributes: {
+    addDocumentCard: Schema.Attribute.Component<
+      'health-track.add-document-card',
+      false
+    > &
+      Schema.Attribute.Required;
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    detailsRequired: Schema.Attribute.Component<
+      'health-track.details-required',
+      false
+    > &
+      Schema.Attribute.Required;
+    queryText: Schema.Attribute.Component<'health-track.query-text', false> &
+      Schema.Attribute.Required;
+    showDocumentsCard: Schema.Attribute.Component<
+      'health-track.show-documents-card',
+      false
+    > &
+      Schema.Attribute.Required;
+    supplementaryCard: Schema.Attribute.Component<
+      'health-track.supplementary-card',
+      false
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String;
+    trackCardObject: Schema.Attribute.Component<
+      'health-track.track-card-object',
+      false
+    > &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface HealthTrackTrackCardObject extends Struct.ComponentSchema {
+  collectionName: 'components_health_track_track_card_objects';
+  info: {
+    description: '';
+    displayName: 'trackCardObject';
+  };
+  attributes: {
+    admissionDt: Schema.Attribute.String & Schema.Attribute.Required;
+    approvedAmount: Schema.Attribute.String & Schema.Attribute.Required;
+    claimedAmount: Schema.Attribute.String & Schema.Attribute.Required;
+    claimNo: Schema.Attribute.String;
+    claimType: Schema.Attribute.String & Schema.Attribute.Required;
+    dischargeDt: Schema.Attribute.String & Schema.Attribute.Required;
+    hegicCardNo: Schema.Attribute.String & Schema.Attribute.Required;
+    hospitalName: Schema.Attribute.String & Schema.Attribute.Required;
+    intimationDt: Schema.Attribute.String & Schema.Attribute.Required;
+    patientName: Schema.Attribute.String & Schema.Attribute.Required;
+    policyNo: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ImageDescriptionsBanner extends Struct.ComponentSchema {
   collectionName: 'components_image_descriptions_banners';
   info: {
@@ -314,6 +475,18 @@ export interface SharedTitle extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTitleDescription extends Struct.ComponentSchema {
+  collectionName: 'components_shared_title_descriptions';
+  info: {
+    description: '';
+    displayName: 'title-description';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -323,6 +496,15 @@ declare module '@strapi/strapi' {
       'article-components.quote-banner': ArticleComponentsQuoteBanner;
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
+      'health-track.add-document-card': HealthTrackAddDocumentCard;
+      'health-track.details-required': HealthTrackDetailsRequired;
+      'health-track.error-encountered': HealthTrackErrorEncountered;
+      'health-track.no-claim-found': HealthTrackNoClaimFound;
+      'health-track.query-text': HealthTrackQueryText;
+      'health-track.show-documents-card': HealthTrackShowDocumentsCard;
+      'health-track.supplementary-card': HealthTrackSupplementaryCard;
+      'health-track.track-a-claim': HealthTrackTrackAClaim;
+      'health-track.track-card-object': HealthTrackTrackCardObject;
       'image-descriptions.banner': ImageDescriptionsBanner;
       'image-descriptions.content': ImageDescriptionsContent;
       'image-descriptions.image-descriptions': ImageDescriptionsImageDescriptions;
@@ -342,6 +524,7 @@ declare module '@strapi/strapi' {
       'shared.slider': SharedSlider;
       'shared.steps': SharedSteps;
       'shared.title': SharedTitle;
+      'shared.title-description': SharedTitleDescription;
     }
   }
 }
