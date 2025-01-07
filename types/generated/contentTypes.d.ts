@@ -761,6 +761,221 @@ export interface ApiLoginLabelLoginLabel extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiMotorClaimMotorClaim extends Struct.SingleTypeSchema {
+  collectionName: 'motor_claims';
+  info: {
+    description: '';
+    displayName: 'motor-claim';
+    pluralName: 'motor-claims';
+    singularName: 'motor-claim';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    enterClaimDetails: Schema.Attribute.Component<
+      'motor-claim.enter-claim-details',
+      false
+    >;
+    enterLossIncur: Schema.Attribute.Component<
+      'motor-claim.enter-loss-incur',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::motor-claim.motor-claim'
+    > &
+      Schema.Attribute.Private;
+    progressiveStepBar: Schema.Attribute.Component<
+      'motor-claim.progressive-step-bar',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    selectNature: Schema.Attribute.Component<
+      'motor-claim.select-nature',
+      false
+    >;
+    successfullyRegisteredCms: Schema.Attribute.Component<
+      'motor-claim.successfully-registered-cms',
+      false
+    >;
+    successfullySubmittedCms: Schema.Attribute.Component<
+      'motor-claim.successfully-submitted-cms',
+      false
+    >;
+    tellusAboutYourself: Schema.Attribute.Component<
+      'motor-claim.tellus-about-yourself',
+      false
+    >;
+    unavailableClaimCms: Schema.Attribute.Component<
+      'motor-claim.wrong-claim-cms',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    whoIsClaiming: Schema.Attribute.Component<
+      'motor-claim.who-is-claiming',
+      false
+    >;
+    wrongClaimCms: Schema.Attribute.Component<
+      'motor-claim.wrong-claim-cms',
+      false
+    >;
+  };
+}
+
+export interface ApiMotorRenewalMotorRenewal extends Struct.SingleTypeSchema {
+  collectionName: 'motor_renewals';
+  info: {
+    displayName: 'Motor-renewal';
+    pluralName: 'motor-renewals';
+    singularName: 'motor-renewal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    addOnCardDump: Schema.Attribute.Component<
+      'motor-renewal.add-on-card-dump',
+      false
+    >;
+    addOnCheckboxInputDump: Schema.Attribute.Component<
+      'motor-renewal.add-on-checkbox-input-dump',
+      false
+    >;
+    alreadyRequestedDump: Schema.Attribute.Component<
+      'motor-renewal.request-callback-bs-dump',
+      false
+    >;
+    backButtonRequestCallbackDump: Schema.Attribute.Component<
+      'motor-renewal.back-button-request-callback-dump',
+      false
+    >;
+    consentDump: Schema.Attribute.Component<
+      'motor-renewal.consent-dump',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customIDVInputDump: Schema.Attribute.Component<
+      'motor-renewal.custom-idv-input-dump',
+      false
+    >;
+    detailsMismatchDump: Schema.Attribute.Component<
+      'motor-renewal.details-mismatch-dump',
+      false
+    >;
+    failedPaymentDump: Schema.Attribute.Component<
+      'motor-renewal.failed-payment-dump',
+      false
+    >;
+    insuredDeclaredValueCardDump: Schema.Attribute.Component<
+      'motor-renewal.insured-declared-value-card-dump',
+      false
+    >;
+    loadingScreenDump: Schema.Attribute.Component<
+      'motor-renewal.loading-screen-dump',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::motor-renewal.motor-renewal'
+    > &
+      Schema.Attribute.Private;
+    motoRenewalLanding: Schema.Attribute.Component<
+      'motor-renewal.moto-renewal-landing',
+      false
+    >;
+    motorRenewalLandingDump: Schema.Attribute.Component<
+      'motor-renewal.motor-renewal-landing-dump',
+      false
+    >;
+    noClaimBonusDump: Schema.Attribute.Component<
+      'motor-renewal.no-claim-bonus-dump',
+      false
+    >;
+    notRenewedDump: Schema.Attribute.Component<
+      'motor-renewal.back-button-request-callback-dump',
+      false
+    >;
+    paymentSuccessDump: Schema.Attribute.Component<
+      'motor-renewal.payment-success-dump',
+      false
+    >;
+    policyNumberDump: Schema.Attribute.Component<
+      'motor-renewal.policy-number-dump',
+      false
+    >;
+    premiumBreakupDump: Schema.Attribute.Component<
+      'motor-renewal.premium-breakup-dump',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    renewNowModalDump: Schema.Attribute.Component<
+      'motor-renewal.back-button-request-callback-dump',
+      false
+    >;
+    requestCallback: Schema.Attribute.Component<
+      'motor-renewal.request-callback',
+      true
+    >;
+    requestCallbackBSDump: Schema.Attribute.Component<
+      'motor-renewal.request-callback-bs-dump',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiMotorTrackMotorTrack extends Struct.SingleTypeSchema {
+  collectionName: 'motor_tracks';
+  info: {
+    description: '';
+    displayName: 'Motor-track';
+    pluralName: 'motor-tracks';
+    singularName: 'motor-track';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    informationMismatch: Schema.Attribute.Component<
+      'motor-track.information-mismatch',
+      false
+    >;
+    invalidClaimNumber: Schema.Attribute.Component<
+      'motor-track.information-mismatch',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::motor-track.motor-track'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    somethingWentWrong: Schema.Attribute.Component<
+      'motor-track.something-went-wrong',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiOldArticleOldArticle extends Struct.CollectionTypeSchema {
   collectionName: 'old_articles';
   info: {
@@ -1316,6 +1531,9 @@ declare module '@strapi/strapi' {
       'api::health-claim.health-claim': ApiHealthClaimHealthClaim;
       'api::health-track.health-track': ApiHealthTrackHealthTrack;
       'api::login-label.login-label': ApiLoginLabelLoginLabel;
+      'api::motor-claim.motor-claim': ApiMotorClaimMotorClaim;
+      'api::motor-renewal.motor-renewal': ApiMotorRenewalMotorRenewal;
+      'api::motor-track.motor-track': ApiMotorTrackMotorTrack;
       'api::old-article.old-article': ApiOldArticleOldArticle;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
