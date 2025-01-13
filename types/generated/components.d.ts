@@ -164,16 +164,6 @@ export interface ClaimsStaticClaimSteps extends Struct.ComponentSchema {
     infoCont: Schema.Attribute.Component<'claims-static.info-cont', false>;
     labelCont: Schema.Attribute.Component<'claims-static.label-cont', false>;
     step: Schema.Attribute.String;
-export interface CustomerDueDiligenceAnnualIncome
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_annual_incomes';
-  info: {
-    displayName: 'annualIncome';
-  };
-  attributes: {
-    key: Schema.Attribute.String;
-    label: Schema.Attribute.String;
-    optionsKey: Schema.Attribute.String;
     type: Schema.Attribute.String;
   };
 }
@@ -217,162 +207,6 @@ export interface ClaimsStaticDocumentChecklist extends Struct.ComponentSchema {
     bullet: Schema.Attribute.Component<
       'claims-static.bullet-points-claim',
       true
-export interface CustomerDueDiligenceCustomerDueDiligence
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_customer_due_diligences';
-  info: {
-    displayName: 'customerDueDiligence';
-  };
-  attributes: {
-    backButton: Schema.Attribute.String;
-    dashboardButtonText: Schema.Attribute.String;
-    submitText: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceEkycDetails
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_ekyc_details';
-  info: {
-    displayName: 'ekycDetails';
-  };
-  attributes: {
-    cKycTile: Schema.Attribute.String;
-    ekycIdTitle: Schema.Attribute.String;
-    nameTitle: Schema.Attribute.String;
-    panTitle: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceIndian extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_indians';
-  info: {
-    displayName: 'Indian';
-  };
-  attributes: {
-    Indian: Schema.Attribute.Component<'customer-due-diligence.title', false>;
-  };
-}
-
-export interface CustomerDueDiligenceIsPoliticallyExposed
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_is_politically_exposeds';
-  info: {
-    displayName: 'isPoliticallyExposed';
-  };
-  attributes: {
-    isPoliticallyExposed: Schema.Attribute.Component<
-      'customer-due-diligence.nationality',
-      false
-    >;
-  };
-}
-
-export interface CustomerDueDiligenceMaritalStatus
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_marital_statuses';
-  info: {
-    displayName: 'maritalStatus';
-  };
-  attributes: {
-    maritalStatus: Schema.Attribute.Component<
-      'customer-due-diligence.annual-income',
-      false
-    >;
-  };
-}
-
-export interface CustomerDueDiligenceMothersName
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_mothers_names';
-  info: {
-    displayName: 'mothersName';
-  };
-  attributes: {
-    key: Schema.Attribute.String;
-    label: Schema.Attribute.String;
-    placeHolder: Schema.Attribute.String;
-    type: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceNationality
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_nationalities';
-  info: {
-    displayName: 'nationality';
-  };
-  attributes: {
-    key: Schema.Attribute.String;
-    label: Schema.Attribute.String;
-    type: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceNo extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_nos';
-  info: {
-    displayName: 'No';
-  };
-  attributes: {
-    No: Schema.Attribute.Component<'customer-due-diligence.title', false>;
-  };
-}
-
-export interface CustomerDueDiligenceOccupation extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_occupations';
-  info: {
-    displayName: 'occupation';
-  };
-  attributes: {
-    occupation: Schema.Attribute.Component<
-      'customer-due-diligence.annual-income',
-      false
-    >;
-  };
-}
-
-export interface CustomerDueDiligenceOrganizationType
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_organization_types';
-  info: {
-    displayName: 'organizationType';
-  };
-  attributes: {
-    organizationType: Schema.Attribute.Component<
-      'customer-due-diligence.annual-income',
-      false
-    >;
-  };
-}
-
-export interface CustomerDueDiligenceQueryWidget
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_query_widgets';
-  info: {
-    description: '';
-    displayName: 'queryWidget';
-  };
-  attributes: {
-    contactMail: Schema.Attribute.Email;
-    contactText: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceServerError
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_server_errors';
-  info: {
-    description: '';
-    displayName: 'serverError';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-    imageUrl: Schema.Attribute.String;
-    primaryButtonText: Schema.Attribute.String;
-    queryWidget: Schema.Attribute.Component<
-      'customer-due-diligence.query-widget',
-      false
     >;
     title: Schema.Attribute.String;
   };
@@ -593,64 +427,6 @@ export interface ClaimsStaticReimbursementSteps extends Struct.ComponentSchema {
   };
   attributes: {
     infoCont: Schema.Attribute.Component<'claims-static.info-cont', true>;
-export interface CustomerDueDiligenceSubmitSuccess
-  extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_submit_successes';
-  info: {
-    description: '';
-    displayName: 'submitSuccess';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-    imageUrl: Schema.Attribute.String;
-    primaryButtonText: Schema.Attribute.String;
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceTipInfo extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_tip_infos';
-  info: {
-    displayName: 'tipInfo';
-  };
-  attributes: {
-    description: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceTitle extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_titles';
-  info: {
-    description: '';
-    displayName: 'nri';
-  };
-  attributes: {
-    title: Schema.Attribute.String;
-  };
-}
-
-export interface CustomerDueDiligenceYes extends Struct.ComponentSchema {
-  collectionName: 'components_customer_due_diligence_yeses';
-  info: {
-    displayName: 'Yes';
-  };
-  attributes: {
-    Yes: Schema.Attribute.Component<'customer-due-diligence.title', false>;
-  };
-}
-
-export interface DashboardBuyInsuranceCard extends Struct.ComponentSchema {
-  collectionName: 'components_dashboard_buy_insurance_cards';
-  info: {
-    displayName: 'card';
-  };
-  attributes: {
-    bannerText: Schema.Attribute.String;
-    img: Schema.Attribute.String;
-    isNew: Schema.Attribute.Boolean;
-    showCard: Schema.Attribute.String;
-    subtitle: Schema.Attribute.String;
-    title: Schema.Attribute.String;
     type: Schema.Attribute.String;
   };
 }
@@ -741,15 +517,6 @@ export interface ClaimsStaticTwoWheelerInsurance
     >;
     sectionHeading: Schema.Attribute.Component<
       'claims-static.section-heading',
-export interface DashboardBuyInsuranceCommercial
-  extends Struct.ComponentSchema {
-  collectionName: 'components_dashboard_buy_insurance_commercials';
-  info: {
-    displayName: 'commercial';
-  };
-  attributes: {
-    commercial: Schema.Attribute.Component<
-      'dashboard-buy-insurance.card',
       false
     >;
   };
@@ -776,6 +543,273 @@ export interface ClaimsClaimBanner extends Struct.ComponentSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsTabsClaimPage extends Struct.ComponentSchema {
+  collectionName: 'components_claims_tabs_claim_pages';
+  info: {
+    description: '';
+    displayName: 'tabsClaimPage';
+  };
+  attributes: {
+    tabs: Schema.Attribute.Component<'claims-static.tabs', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceAnnualIncome
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_annual_incomes';
+  info: {
+    displayName: 'annualIncome';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    optionsKey: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceCustomerDueDiligence
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_customer_due_diligences';
+  info: {
+    displayName: 'customerDueDiligence';
+  };
+  attributes: {
+    backButton: Schema.Attribute.String;
+    dashboardButtonText: Schema.Attribute.String;
+    submitText: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceEkycDetails
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_ekyc_details';
+  info: {
+    displayName: 'ekycDetails';
+  };
+  attributes: {
+    cKycTile: Schema.Attribute.String;
+    ekycIdTitle: Schema.Attribute.String;
+    nameTitle: Schema.Attribute.String;
+    panTitle: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceIndian extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_indians';
+  info: {
+    displayName: 'Indian';
+  };
+  attributes: {
+    Indian: Schema.Attribute.Component<'customer-due-diligence.title', false>;
+  };
+}
+
+export interface CustomerDueDiligenceIsPoliticallyExposed
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_is_politically_exposeds';
+  info: {
+    displayName: 'isPoliticallyExposed';
+  };
+  attributes: {
+    isPoliticallyExposed: Schema.Attribute.Component<
+      'customer-due-diligence.nationality',
+      false
+    >;
+  };
+}
+
+export interface CustomerDueDiligenceMaritalStatus
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_marital_statuses';
+  info: {
+    displayName: 'maritalStatus';
+  };
+  attributes: {
+    maritalStatus: Schema.Attribute.Component<
+      'customer-due-diligence.annual-income',
+      false
+    >;
+  };
+}
+
+export interface CustomerDueDiligenceMothersName
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_mothers_names';
+  info: {
+    displayName: 'mothersName';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeHolder: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceNationality
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_nationalities';
+  info: {
+    displayName: 'nationality';
+  };
+  attributes: {
+    key: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceNo extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_nos';
+  info: {
+    displayName: 'No';
+  };
+  attributes: {
+    No: Schema.Attribute.Component<'customer-due-diligence.title', false>;
+  };
+}
+
+export interface CustomerDueDiligenceOccupation extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_occupations';
+  info: {
+    displayName: 'occupation';
+  };
+  attributes: {
+    occupation: Schema.Attribute.Component<
+      'customer-due-diligence.annual-income',
+      false
+    >;
+  };
+}
+
+export interface CustomerDueDiligenceOrganizationType
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_organization_types';
+  info: {
+    displayName: 'organizationType';
+  };
+  attributes: {
+    organizationType: Schema.Attribute.Component<
+      'customer-due-diligence.annual-income',
+      false
+    >;
+  };
+}
+
+export interface CustomerDueDiligenceQueryWidget
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_query_widgets';
+  info: {
+    description: '';
+    displayName: 'queryWidget';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.Email;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceServerError
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_server_errors';
+  info: {
+    description: '';
+    displayName: 'serverError';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<
+      'customer-due-diligence.query-widget',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceSubmitSuccess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_submit_successes';
+  info: {
+    description: '';
+    displayName: 'submitSuccess';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceTipInfo extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_tip_infos';
+  info: {
+    displayName: 'tipInfo';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceTitle extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_titles';
+  info: {
+    description: '';
+    displayName: 'nri';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface CustomerDueDiligenceYes extends Struct.ComponentSchema {
+  collectionName: 'components_customer_due_diligence_yeses';
+  info: {
+    displayName: 'Yes';
+  };
+  attributes: {
+    Yes: Schema.Attribute.Component<'customer-due-diligence.title', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    bannerText: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    isNew: Schema.Attribute.Boolean;
+    showCard: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardBuyInsuranceCommercial
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_commercials';
+  info: {
+    displayName: 'commercial';
+  };
+  attributes: {
+    commercial: Schema.Attribute.Component<
+      'dashboard-buy-insurance.card',
+      false
+    >;
+  };
+}
+
 export interface DashboardBuyInsuranceCorporate extends Struct.ComponentSchema {
   collectionName: 'components_dashboard_buy_insurance_corporates';
   info: {
@@ -859,14 +893,6 @@ export interface DashboardBuyInsuranceNeedsYourAttention
   };
 }
 
-export interface ClaimsTabsClaimPage extends Struct.ComponentSchema {
-  collectionName: 'components_claims_tabs_claim_pages';
-  info: {
-    description: '';
-    displayName: 'tabsClaimPage';
-  };
-  attributes: {
-    tabs: Schema.Attribute.Component<'claims-static.tabs', true>;
 export interface DashboardBuyInsurancePet extends Struct.ComponentSchema {
   collectionName: 'components_dashboard_buy_insurance_pets';
   info: {
@@ -1406,6 +1432,330 @@ export interface DashboardSupportCms extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
     type: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderBottomNav extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_bottom_navs';
+  info: {
+    displayName: 'bottomNav';
+  };
+  attributes: {
+    btnLabel: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderCamera extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_cameras';
+  info: {
+    displayName: 'camera';
+  };
+  attributes: {
+    retake: Schema.Attribute.String;
+    submit: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderClaimDocumentList
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_claim_document_lists';
+  info: {
+    displayName: 'claimDocumentList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    goBackSheet: Schema.Attribute.Component<
+      'document-uploader.go-back-sheet',
+      false
+    >;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderConfirmSubmit extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_confirm_submits';
+  info: {
+    displayName: 'confirmSubmit';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryText: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_modals';
+  info: {
+    displayName: 'documentModal';
+  };
+  attributes: {
+    cameraLabel: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    uploadFileLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentProgressModal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_progress_modals';
+  info: {
+    displayName: 'documentProgressModal';
+  };
+  attributes: {
+    compressLabel: Schema.Attribute.String;
+    selectFileLabel: Schema.Attribute.String;
+    selectLabel: Schema.Attribute.String;
+    skipLabel: Schema.Attribute.String;
+    storageLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentUploadModal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_upload_modals';
+  info: {
+    displayName: 'documentUploadModal';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    fileFormats: Schema.Attribute.String;
+    linkText: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
+    maxFileSize: Schema.Attribute.String;
+    note: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderErrorModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_modals';
+  info: {
+    displayName: 'errorModal';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    emailLabel: Schema.Attribute.String;
+    homeLabel: Schema.Attribute.String;
+    skipLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderErrorScreen extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_screens';
+  info: {
+    description: '';
+    displayName: 'errorScreen';
+  };
+  attributes: {
+    bottomNav: Schema.Attribute.Component<
+      'document-uploader.bottom-nav',
+      false
+    >;
+    modal: Schema.Attribute.Component<'document-uploader.error-modal', false>;
+  };
+}
+
+export interface DocumentUploaderErrorSuccess extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_successes';
+  info: {
+    description: '';
+    displayName: 'errorSuccess';
+  };
+  attributes: {
+    serverError: Schema.Attribute.Component<
+      'document-uploader.error-success-json',
+      false
+    >;
+    submitFailed: Schema.Attribute.Component<
+      'document-uploader.error-success-json',
+      false
+    >;
+  };
+}
+
+export interface DocumentUploaderErrorSuccessJson
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_success_jsons';
+  info: {
+    description: '';
+    displayName: 'errorJson';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<
+      'document-uploader.query-widget',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderFileBlank extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_file_blanks';
+  info: {
+    displayName: 'fileBlank';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderFileNotContainDot
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_file_not_contain_dots';
+  info: {
+    displayName: 'fileNotContainDot';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderGoBackSheet extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_go_back_sheets';
+  info: {
+    displayName: 'goBackSheet';
+  };
+  attributes: {
+    imageUrl: Schema.Attribute.String;
+    primaryText: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_modals';
+  info: {
+    displayName: 'modal';
+  };
+  attributes: {
+    claimLabel: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderQueryWidget extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_query_widgets';
+  info: {
+    displayName: 'queryWidget';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.Email;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderQueryWidgetSuccess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_query_widget_successes';
+  info: {
+    displayName: 'queryWidgetSuccess';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.Email;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSpanText extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_span_texts';
+  info: {
+    displayName: 'spanText';
+  };
+  attributes: {
+    descriptionLabel: Schema.Attribute.String;
+    maxLabel: Schema.Attribute.String;
+    sizeLabel: Schema.Attribute.String;
+    textLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSubmissionError
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_submission_errors';
+  info: {
+    displayName: 'submissionError';
+  };
+  attributes: {
+    cantUploadLabel: Schema.Attribute.String;
+    claimLabel: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    submitErrorLabel: Schema.Attribute.String;
+    submitLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSubmitDocumentDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_submit_document_dumps';
+  info: {
+    displayName: 'submitDocumentDump';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSuccess extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_successes';
+  info: {
+    displayName: 'success';
+  };
+  attributes: {
+    copyPrefix: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<
+      'document-uploader.query-widget-success',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderUploadRequiredDocuments
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_upload_required_documents';
+  info: {
+    description: '';
+    displayName: 'uploadRequiredDocuments';
+  };
+  attributes: {
+    confirmSubmit: Schema.Attribute.Component<
+      'document-uploader.confirm-submit',
+      false
+    >;
+    fileBlank: Schema.Attribute.Component<
+      'document-uploader.file-blank',
+      false
+    >;
+    fileNotContainDot: Schema.Attribute.Component<
+      'document-uploader.file-not-contain-dot',
+      false
+    >;
+    imageUrl: Schema.Attribute.String;
+    spanText: Schema.Attribute.Component<'document-uploader.span-text', false>;
+    title: Schema.Attribute.String;
+    uploadLabel: Schema.Attribute.String;
   };
 }
 
@@ -4070,6 +4420,28 @@ declare module '@strapi/strapi' {
       'dashboard.dashboard-newsletter-cms': DashboardDashboardNewsletterCms;
       'dashboard.ecosystem-qr-cms': DashboardEcosystemQrCms;
       'dashboard.support-cms': DashboardSupportCms;
+      'document-uploader.bottom-nav': DocumentUploaderBottomNav;
+      'document-uploader.camera': DocumentUploaderCamera;
+      'document-uploader.claim-document-list': DocumentUploaderClaimDocumentList;
+      'document-uploader.confirm-submit': DocumentUploaderConfirmSubmit;
+      'document-uploader.document-modal': DocumentUploaderDocumentModal;
+      'document-uploader.document-progress-modal': DocumentUploaderDocumentProgressModal;
+      'document-uploader.document-upload-modal': DocumentUploaderDocumentUploadModal;
+      'document-uploader.error-modal': DocumentUploaderErrorModal;
+      'document-uploader.error-screen': DocumentUploaderErrorScreen;
+      'document-uploader.error-success': DocumentUploaderErrorSuccess;
+      'document-uploader.error-success-json': DocumentUploaderErrorSuccessJson;
+      'document-uploader.file-blank': DocumentUploaderFileBlank;
+      'document-uploader.file-not-contain-dot': DocumentUploaderFileNotContainDot;
+      'document-uploader.go-back-sheet': DocumentUploaderGoBackSheet;
+      'document-uploader.modal': DocumentUploaderModal;
+      'document-uploader.query-widget': DocumentUploaderQueryWidget;
+      'document-uploader.query-widget-success': DocumentUploaderQueryWidgetSuccess;
+      'document-uploader.span-text': DocumentUploaderSpanText;
+      'document-uploader.submission-error': DocumentUploaderSubmissionError;
+      'document-uploader.submit-document-dump': DocumentUploaderSubmitDocumentDump;
+      'document-uploader.success': DocumentUploaderSuccess;
+      'document-uploader.upload-required-documents': DocumentUploaderUploadRequiredDocuments;
       'ekyc-track.aadhar-input': EkycTrackAadharInput;
       'ekyc-track.aadhar-verification': EkycTrackAadharVerification;
       'ekyc-track.aadhar-verification-error': EkycTrackAadharVerificationError;

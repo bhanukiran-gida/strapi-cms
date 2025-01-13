@@ -572,14 +572,6 @@ export interface ApiClaimClaim extends Struct.SingleTypeSchema {
     displayName: 'Claims-static';
     pluralName: 'claims';
     singularName: 'claim';
-export interface ApiCustomerDueDiligenceCustomerDueDiligence
-  extends Struct.SingleTypeSchema {
-  collectionName: 'customer_due_diligences';
-  info: {
-    description: '';
-    displayName: 'customer-due-diligence';
-    pluralName: 'customer-due-diligences';
-    singularName: 'customer-due-diligence';
   };
   options: {
     draftAndPublish: true;
@@ -645,6 +637,27 @@ export interface ApiCustomerDueDiligenceCustomerDueDiligence
     >;
     twoWheelerInsurance: Schema.Attribute.Component<
       'claims-static.two-wheeler-insurance',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCustomerDueDiligenceCustomerDueDiligence
+  extends Struct.SingleTypeSchema {
+  collectionName: 'customer_due_diligences';
+  info: {
+    description: '';
+    displayName: 'customer-due-diligence';
+    pluralName: 'customer-due-diligences';
+    singularName: 'customer-due-diligence';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1043,6 +1056,74 @@ export interface ApiDashboardDashboard extends Struct.SingleTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDocumentUploaderDocumentUploader
+  extends Struct.SingleTypeSchema {
+  collectionName: 'document_uploaders';
+  info: {
+    description: '';
+    displayName: 'Health-document-uploader';
+    pluralName: 'document-uploaders';
+    singularName: 'document-uploader';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    camera: Schema.Attribute.Component<'document-uploader.camera', false>;
+    claimDocumentList: Schema.Attribute.Component<
+      'document-uploader.claim-document-list',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    documentModal: Schema.Attribute.Component<
+      'document-uploader.document-modal',
+      false
+    >;
+    documentProgressModal: Schema.Attribute.Component<
+      'document-uploader.document-progress-modal',
+      false
+    >;
+    documentUploadModal: Schema.Attribute.Component<
+      'document-uploader.document-upload-modal',
+      false
+    >;
+    errorScreen: Schema.Attribute.Component<
+      'document-uploader.error-screen',
+      false
+    >;
+    errorSuccessJson: Schema.Attribute.Component<
+      'document-uploader.error-success',
+      false
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::document-uploader.document-uploader'
+    > &
+      Schema.Attribute.Private;
+    modal: Schema.Attribute.Component<'document-uploader.modal', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    submissionError: Schema.Attribute.Component<
+      'document-uploader.submission-error',
+      false
+    >;
+    submitDocumentDump: Schema.Attribute.Component<
+      'document-uploader.submit-document-dump',
+      false
+    >;
+    success: Schema.Attribute.Component<'document-uploader.success', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    uploadRequiredDocuments: Schema.Attribute.Component<
+      'document-uploader.upload-required-documents',
+      false
+    >;
   };
 }
 
@@ -2348,6 +2429,7 @@ declare module '@strapi/strapi' {
       'api::dashboard-quick-action.dashboard-quick-action': ApiDashboardQuickActionDashboardQuickAction;
       'api::dashboard-trusted-by-customer.dashboard-trusted-by-customer': ApiDashboardTrustedByCustomerDashboardTrustedByCustomer;
       'api::dashboard.dashboard': ApiDashboardDashboard;
+      'api::document-uploader.document-uploader': ApiDocumentUploaderDocumentUploader;
       'api::e-kyc-procedure.e-kyc-procedure': ApiEKycProcedureEKycProcedure;
       'api::ekyc-track.ekyc-track': ApiEkycTrackEkycTrack;
       'api::generate-ekyc.generate-ekyc': ApiGenerateEkycGenerateEkyc;
