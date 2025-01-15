@@ -469,6 +469,10 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     metaFields: Schema.Attribute.Component<'meta-fields.meta-fields', false>;
+    oldRelatedArticles: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::old-article.old-article'
+    >;
     postedOn: Schema.Attribute.Date & Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     quoteBanner: Schema.Attribute.Component<
