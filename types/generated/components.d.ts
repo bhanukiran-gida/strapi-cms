@@ -5143,6 +5143,7 @@ export interface SharedMedia extends Struct.ComponentSchema {
   };
   attributes: {
     image: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.String;
   };
 }
 
