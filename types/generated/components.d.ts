@@ -84,6 +84,481 @@ export interface ArticleComponentsVideoUrl extends Struct.ComponentSchema {
   };
 }
 
+export interface ClaimsStaticAwardCont extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_award_conts';
+  info: {
+    displayName: 'award-cont';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'claims-static.heading', false>;
+    subheading: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticBulletPointsClaim extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_bullet_points_claims';
+  info: {
+    displayName: 'bulletPointsClaim';
+  };
+  attributes: {
+    point: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticButton extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_buttons';
+  info: {
+    displayName: 'button';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticCarInsurance extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_car_insurances';
+  info: {
+    displayName: 'carInsurance';
+  };
+  attributes: {
+    cashlessBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    claimSectionHeading: Schema.Attribute.Component<
+      'claims-static.section-heading',
+      false
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    reimbursmentBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticCattleInsuranceDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_cattle_insurance_dumps';
+  info: {
+    description: '';
+    displayName: 'cattleInsuranceDump';
+  };
+  attributes: {
+    cattleInsuranceBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+  };
+}
+
+export interface ClaimsStaticClaimSteps extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_claim_steps';
+  info: {
+    displayName: 'claimSteps';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'claims-static.button', false>;
+    headerLabel: Schema.Attribute.String;
+    infoCont: Schema.Attribute.Component<'claims-static.info-cont', false>;
+    labelCont: Schema.Attribute.Component<'claims-static.label-cont', false>;
+    step: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticClaimTabs extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_claim_tabs';
+  info: {
+    displayName: 'claim-tabs';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    tabId: Schema.Attribute.Integer;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticCriticalIlnessInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_critical_ilness_insurances';
+  info: {
+    description: '';
+    displayName: 'criticalIlnessInsurance';
+  };
+  attributes: {
+    criticalIlnessBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+  };
+}
+
+export interface ClaimsStaticDocumentChecklist extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_document_checklists';
+  info: {
+    description: '';
+    displayName: 'bulletPointsContClaims';
+  };
+  attributes: {
+    bullet: Schema.Attribute.Component<
+      'claims-static.bullet-points-claim',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticGroupMedicalInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_group_medical_insurances';
+  info: {
+    displayName: 'groupMedicalInsurance';
+  };
+  attributes: {
+    groupMedicalInsuranceBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      false
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+  };
+}
+
+export interface ClaimsStaticGroupPersonalInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_group_personal_insurances';
+  info: {
+    description: '';
+    displayName: 'groupPersonalInsurance';
+  };
+  attributes: {
+    groupPersonalInsuranceBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+  };
+}
+
+export interface ClaimsStaticGroupTravelInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_group_travel_insurances';
+  info: {
+    description: '';
+    displayName: 'groupTravelInsurance';
+  };
+  attributes: {
+    groupMedicalInsuranceBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+  };
+}
+
+export interface ClaimsStaticHeading extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_headings';
+  info: {
+    displayName: 'heading';
+  };
+  attributes: {
+    label1: Schema.Attribute.String;
+    label2: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticHeadingClaim extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_heading_claims';
+  info: {
+    displayName: 'headingClaim';
+  };
+  attributes: {
+    claim: Schema.Attribute.String;
+    process: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticHealthInsurance extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_health_insurances';
+  info: {
+    description: '';
+    displayName: 'healthInsurance';
+  };
+  attributes: {
+    bulletPoints: Schema.Attribute.Component<
+      'claims-static.bullet-points-claim',
+      true
+    >;
+    claimSteps: Schema.Attribute.Component<'claims-static.claim-steps', true>;
+    documentChecklist: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    headingClaim: Schema.Attribute.Component<
+      'claims-static.heading-claim',
+      false
+    >;
+    pointsCont: Schema.Attribute.Component<
+      'claims-static.points-container',
+      false
+    >;
+    reimbursementSteps: Schema.Attribute.Component<
+      'claims-static.reimbursement-steps',
+      true
+    >;
+    sectionHeading: Schema.Attribute.Component<
+      'claims-static.section-heading',
+      false
+    >;
+    subheading: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticInfoCont extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_info_conts';
+  info: {
+    displayName: 'infoCont';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    subheading: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticKidnapExtortionInsuranceDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_kidnap_extortion_insurance_dumps';
+  info: {
+    displayName: 'kidnapExtortionInsuranceDump';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    kidnapExtortionBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticLabelCont extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_label_conts';
+  info: {
+    displayName: 'labelCont';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    value: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticMarineHullInsuranceDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_marine_hull_insurance_dumps';
+  info: {
+    displayName: 'marineHullInsuranceDump';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    marineHullBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticPersonalAccidentInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_personal_accident_insurances';
+  info: {
+    description: '';
+    displayName: 'personalAccidentInsurance';
+  };
+  attributes: {
+    cashlessBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    claimSectionHeading: Schema.Attribute.Component<
+      'claims-static.section-heading',
+      false
+    >;
+    claimSteps: Schema.Attribute.Component<'claims-static.claim-steps', true>;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    reimbursmentBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticPointsContainer extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_points_containers';
+  info: {
+    displayName: 'pointsContainer';
+  };
+  attributes: {
+    heading: Schema.Attribute.String;
+    link: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticRainfallIndexInsuranceDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_rainfall_index_insurance_dumps';
+  info: {
+    displayName: 'rainfallIndexInsuranceDump';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    rainfallInsuranceBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticReimbursementSteps extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_reimbursement_steps';
+  info: {
+    displayName: 'reimbursementSteps';
+  };
+  attributes: {
+    infoCont: Schema.Attribute.Component<'claims-static.info-cont', true>;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticSectionHeading extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_section_headings';
+  info: {
+    description: '';
+    displayName: 'sectionHeading';
+  };
+  attributes: {
+    section: Schema.Attribute.Component<'claims-static.sections', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticSections extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_sections';
+  info: {
+    description: '';
+    displayName: 'sections';
+  };
+  attributes: {
+    section: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsStaticTabs extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_tabs';
+  info: {
+    displayName: 'tabs';
+  };
+  attributes: {
+    claimTabs: Schema.Attribute.Component<'claims-static.claim-tabs', true>;
+  };
+}
+
+export interface ClaimsStaticTabsCont extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_tabs_conts';
+  info: {
+    description: '';
+    displayName: 'TabsCont';
+  };
+  attributes: {
+    awardCont: Schema.Attribute.Component<'claims-static.award-cont', false>;
+    tabsClaimPage: Schema.Attribute.Component<'claims.tabs-claim-page', false>;
+  };
+}
+
+export interface ClaimsStaticTravelInsurance extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_travel_insurances';
+  info: {
+    displayName: 'travelInsurance';
+  };
+  attributes: {
+    cashlessBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    claimSectionHeading: Schema.Attribute.Component<
+      'claims-static.section-heading',
+      false
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    reimbursmentBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+  };
+}
+
+export interface ClaimsStaticTwoWheelerInsurance
+  extends Struct.ComponentSchema {
+  collectionName: 'components_claims_static_two_wheeler_insurances';
+  info: {
+    description: '';
+    displayName: 'twoWheelerInsurance';
+  };
+  attributes: {
+    cashlessBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      true
+    >;
+    heading: Schema.Attribute.Component<'claims-static.heading-claim', false>;
+    reimbursmentBulletPoints: Schema.Attribute.Component<
+      'claims-static.document-checklist',
+      false
+    >;
+    sectionHeading: Schema.Attribute.Component<
+      'claims-static.section-heading',
+      false
+    >;
+  };
+}
+
+export interface ClaimsBanner extends Struct.ComponentSchema {
+  collectionName: 'components_claims_banners';
+  info: {
+    displayName: 'Banner';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsClaimBanner extends Struct.ComponentSchema {
+  collectionName: 'components_claims_claim_banners';
+  info: {
+    displayName: 'Claim Banner';
+  };
+  attributes: {
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface ClaimsTabsClaimPage extends Struct.ComponentSchema {
+  collectionName: 'components_claims_tabs_claim_pages';
+  info: {
+    description: '';
+    displayName: 'tabsClaimPage';
+  };
+  attributes: {
+    tabs: Schema.Attribute.Component<'claims-static.tabs', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface CustomerDueDiligenceAnnualIncome
   extends Struct.ComponentSchema {
   collectionName: 'components_customer_due_diligence_annual_incomes';
@@ -302,6 +777,985 @@ export interface CustomerDueDiligenceYes extends Struct.ComponentSchema {
   };
   attributes: {
     Yes: Schema.Attribute.Component<'customer-due-diligence.title', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    bannerText: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    isNew: Schema.Attribute.Boolean;
+    showCard: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardBuyInsuranceCommercial
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_commercials';
+  info: {
+    displayName: 'commercial';
+  };
+  attributes: {
+    commercial: Schema.Attribute.Component<
+      'dashboard-buy-insurance.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardBuyInsuranceCorporate extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_corporates';
+  info: {
+    displayName: 'corporate';
+  };
+  attributes: {
+    corporate: Schema.Attribute.Component<
+      'dashboard-buy-insurance.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardBuyInsuranceCyber extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_cybers';
+  info: {
+    displayName: 'cyber';
+  };
+  attributes: {
+    cyber: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceFourWheeler
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_four_wheelers';
+  info: {
+    displayName: 'fourWheeler';
+  };
+  attributes: {
+    fourWheeler: Schema.Attribute.Component<
+      'dashboard-buy-insurance.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardBuyInsuranceHealth extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_health';
+  info: {
+    displayName: 'health';
+  };
+  attributes: {
+    health: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceHome extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_homes';
+  info: {
+    displayName: 'home';
+  };
+  attributes: {
+    home: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceLinkPolicy
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_link_policies';
+  info: {
+    displayName: 'linkPolicy';
+  };
+  attributes: {
+    buttontext: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardBuyInsuranceNeedsYourAttention
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_needs_your_attentions';
+  info: {
+    displayName: 'needsYourAttention';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardBuyInsurancePet extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_pets';
+  info: {
+    displayName: 'pet';
+  };
+  attributes: {
+    pet: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsurancePmsby extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_pmsbies';
+  info: {
+    displayName: 'pmsby';
+  };
+  attributes: {
+    pmsby: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceResumeJourney
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_resume_journeys';
+  info: {
+    displayName: 'resumeJourney';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardBuyInsuranceTravel extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_travels';
+  info: {
+    displayName: 'travel';
+  };
+  attributes: {
+    travel: Schema.Attribute.Component<'dashboard-buy-insurance.card', false>;
+  };
+}
+
+export interface DashboardBuyInsuranceTwoWheeler
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_buy_insurance_two_wheelers';
+  info: {
+    displayName: 'twoWheeler';
+  };
+  attributes: {
+    twoWheeler: Schema.Attribute.Component<
+      'dashboard-buy-insurance.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardEcosystemCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_cards';
+  info: {
+    description: '';
+    displayName: 'card';
+  };
+  attributes: {
+    img: Schema.Attribute.String;
+    modalDescription: Schema.Attribute.String;
+    modalTitle: Schema.Attribute.String;
+    showCard: Schema.Attribute.Boolean;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardEcosystemDashboardEcosystem
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_dashboard_ecosystems';
+  info: {
+    description: '';
+    displayName: 'dashboard-ecosystem';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'dashboard-ecosystem.card', false>;
+  };
+}
+
+export interface DashboardEcosystemHealth extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_health';
+  info: {
+    displayName: 'health';
+  };
+  attributes: {
+    health: Schema.Attribute.Component<'dashboard-ecosystem.card', false>;
+  };
+}
+
+export interface DashboardEcosystemPets extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_pets';
+  info: {
+    displayName: 'pets';
+  };
+  attributes: {
+    pets: Schema.Attribute.Component<'dashboard-ecosystem.card', false>;
+  };
+}
+
+export interface DashboardEcosystemTitle extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_titles';
+  info: {
+    description: '';
+    displayName: 'auto';
+  };
+  attributes: {
+    auto: Schema.Attribute.Component<'dashboard-ecosystem.card', false>;
+  };
+}
+
+export interface DashboardExploreFourwheelerCard
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_fourwheeler_cards';
+  info: {
+    description: '';
+    displayName: 'card';
+  };
+  attributes: {
+    buttontext: Schema.Attribute.String;
+    category: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    showCard: Schema.Attribute.Boolean;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardExploreFourwheelerDashboardExploreFourwheeler
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_fourwheeler_dashboard_explore_fourwheelers';
+  info: {
+    description: '';
+    displayName: 'dashboard-explore-fourwheeler';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<
+      'dashboard-explore-fourwheeler.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardExploreFourwheelerFourWheeler
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_fourwheeler_four_wheelers';
+  info: {
+    displayName: 'fourWheeler';
+  };
+  attributes: {
+    fourwheeler: Schema.Attribute.Component<
+      'dashboard-explore-fourwheeler.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardExploreFourwheelerTwoWheeler
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_fourwheeler_two_wheelers';
+  info: {
+    displayName: 'twoWheeler';
+  };
+  attributes: {
+    twoWheeler: Schema.Attribute.Component<
+      'dashboard-explore-fourwheeler.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardExploreMoreCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_more_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    buttontext: Schema.Attribute.Blocks;
+    img: Schema.Attribute.String;
+    showCard: Schema.Attribute.Boolean;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardExploreMoreCardOne extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_more_card_ones';
+  info: {
+    displayName: 'cardOne';
+  };
+  attributes: {
+    cardOne: Schema.Attribute.Component<'dashboard-explore-more.card', false>;
+  };
+}
+
+export interface DashboardExploreMoreCardThree extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_more_card_threes';
+  info: {
+    displayName: 'cardThree';
+  };
+  attributes: {
+    cardThree: Schema.Attribute.Component<'dashboard-explore-more.card', false>;
+  };
+}
+
+export interface DashboardExploreMoreCardTwo extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_more_card_twos';
+  info: {
+    displayName: 'cardTwo';
+  };
+  attributes: {
+    cardTwo: Schema.Attribute.Component<'dashboard-explore-more.card', false>;
+  };
+}
+
+export interface DashboardExploreMoreDashboardExploreMore
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_explore_more_dashboard_explore_mores';
+  info: {
+    displayName: 'dashboard-explore-more';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'dashboard-explore-more.card', false>;
+  };
+}
+
+export interface DashboardLatestInHdfcCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_latest_in_hdfc_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    img: Schema.Attribute.String;
+    readTime: Schema.Attribute.String;
+    showCard: Schema.Attribute.Boolean;
+    subtitle: Schema.Attribute.String;
+    tagName: Schema.Attribute.String;
+    time: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardLatestInHdfcDashboardLatestInHdfc
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_latest_in_hdfc_dashboard_latest_in_hdfcs';
+  info: {
+    displayName: 'dashboard-latestIn-hdfc';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'dashboard-latest-in-hdfc.card', false>;
+  };
+}
+
+export interface DashboardQuickActionCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    img: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardQuickActionClaimRegistration
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_claim_registrations';
+  info: {
+    displayName: 'claimRegistration';
+  };
+  attributes: {
+    claimRegistration: Schema.Attribute.Component<
+      'dashboard-quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardQuickActionDashboardQuickAction
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_dashboard_quick_actions';
+  info: {
+    displayName: 'dashboard-quickAction';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'dashboard-quick-action.card', false>;
+  };
+}
+
+export interface DashboardQuickActionEkycProcedure
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_ekyc_procedures';
+  info: {
+    displayName: 'ekycProcedure';
+  };
+  attributes: {
+    ekycProcedure: Schema.Attribute.Component<
+      'dashboard-quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardQuickActionEkycRegistration
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_ekyc_registrations';
+  info: {
+    displayName: 'ekycRegistration';
+  };
+  attributes: {
+    ekycRegistration: Schema.Attribute.Component<
+      'dashboard-quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardQuickActionLinkEia extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_link_eias';
+  info: {
+    displayName: 'linkEia';
+  };
+  attributes: {
+    linkEia: Schema.Attribute.Component<'dashboard-quick-action.card', false>;
+  };
+}
+
+export interface DashboardQuickActionRenewPolicy
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_renew_policies';
+  info: {
+    displayName: 'renewPolicy';
+  };
+  attributes: {
+    renewPolicy: Schema.Attribute.Component<
+      'dashboard-quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardQuickActionTrackClaim extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_quick_action_track_claims';
+  info: {
+    displayName: 'trackClaim';
+  };
+  attributes: {
+    trackClaim: Schema.Attribute.Component<
+      'dashboard-quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardTrustedByCustomerCard extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardTrustedByCustomerCashlessNetwork
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_cashless_networks';
+  info: {
+    displayName: 'Cashless Network';
+  };
+  attributes: {
+    CashlessNetwork: Schema.Attribute.Component<
+      'dashboard-trusted-by-customer.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardTrustedByCustomerClaimSettlementRate
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_claim_settlement_rates';
+  info: {
+    displayName: 'Claim Settlement Rate';
+  };
+  attributes: {
+    ClaimSettlementRate: Schema.Attribute.Component<
+      'dashboard-trusted-by-customer.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardTrustedByCustomerCustomerSupport
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_customer_supports';
+  info: {
+    displayName: 'Customer Support';
+  };
+  attributes: {
+    CustomerSupport: Schema.Attribute.Component<
+      'dashboard-trusted-by-customer.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardTrustedByCustomerDashboardTrustedByCustomer
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_dashboard_trusted_by_customers';
+  info: {
+    displayName: 'dashboard-trusted-by-customer';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<
+      'dashboard-trusted-by-customer.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardTrustedByCustomerHappyCustomers
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_trusted_by_customer_happy_customers';
+  info: {
+    displayName: 'Happy Customers';
+  };
+  attributes: {
+    HappyCustomers: Schema.Attribute.Component<
+      'dashboard-trusted-by-customer.card',
+      false
+    >;
+  };
+}
+
+export interface DashboardCardAlignment extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_card_alignments';
+  info: {
+    displayName: 'cardAlignment';
+  };
+  attributes: {
+    desktopAlignment: Schema.Attribute.String;
+    mobileAlignment: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardDashboardCmsData extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_dashboard_cms_data';
+  info: {
+    description: '';
+    displayName: 'dashboardCmsData';
+  };
+  attributes: {
+    bottomCount: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    buyInsurance: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    connect: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    ecosystem: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    explore: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    fourwheeler: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    latest: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    needsYourAttention: Schema.Attribute.Component<
+      'dashboard.card-alignment',
+      false
+    >;
+    newsletter: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    quickActions: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    scan: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+    support: Schema.Attribute.Component<'dashboard.card-alignment', false>;
+  };
+}
+
+export interface DashboardDashboardConnectWithUsCms
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_dashboard_connect_with_us_cms';
+  info: {
+    displayName: 'dashboardConnectWithUsCms';
+  };
+  attributes: {
+    alignment: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardDashboardNewsletterCms
+  extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_dashboard_newsletter_cms';
+  info: {
+    description: '';
+    displayName: 'dashboardNewsletterCms';
+  };
+  attributes: {
+    alignment: Schema.Attribute.String;
+    buttontext: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardEcosystemQrCms extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_ecosystem_qr_cms';
+  info: {
+    displayName: 'ecosystemQrCms';
+  };
+  attributes: {
+    appleStore: Schema.Attribute.String;
+    desc: Schema.Attribute.String;
+    googleStore: Schema.Attribute.String;
+    mobileButtonText: Schema.Attribute.String;
+    mobileImage: Schema.Attribute.String;
+    scanImage: Schema.Attribute.String;
+    scanTitle: Schema.Attribute.String;
+    scanUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DashboardSupportCms extends Struct.ComponentSchema {
+  collectionName: 'components_dashboard_support_cms';
+  info: {
+    displayName: 'supportCms';
+  };
+  attributes: {
+    alignment: Schema.Attribute.String;
+    buttontext: Schema.Attribute.String;
+    img: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderBottomNav extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_bottom_navs';
+  info: {
+    displayName: 'bottomNav';
+  };
+  attributes: {
+    btnLabel: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderCamera extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_cameras';
+  info: {
+    displayName: 'camera';
+  };
+  attributes: {
+    retake: Schema.Attribute.String;
+    submit: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderClaimDocumentList
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_claim_document_lists';
+  info: {
+    displayName: 'claimDocumentList';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    goBackSheet: Schema.Attribute.Component<
+      'document-uploader.go-back-sheet',
+      false
+    >;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderConfirmSubmit extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_confirm_submits';
+  info: {
+    displayName: 'confirmSubmit';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryText: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_modals';
+  info: {
+    displayName: 'documentModal';
+  };
+  attributes: {
+    cameraLabel: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    uploadFileLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentProgressModal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_progress_modals';
+  info: {
+    displayName: 'documentProgressModal';
+  };
+  attributes: {
+    compressLabel: Schema.Attribute.String;
+    selectFileLabel: Schema.Attribute.String;
+    selectLabel: Schema.Attribute.String;
+    skipLabel: Schema.Attribute.String;
+    storageLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderDocumentUploadModal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_document_upload_modals';
+  info: {
+    displayName: 'documentUploadModal';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    fileFormats: Schema.Attribute.String;
+    linkText: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
+    maxFileSize: Schema.Attribute.String;
+    note: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderErrorModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_modals';
+  info: {
+    displayName: 'errorModal';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    emailLabel: Schema.Attribute.String;
+    homeLabel: Schema.Attribute.String;
+    skipLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderErrorScreen extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_screens';
+  info: {
+    description: '';
+    displayName: 'errorScreen';
+  };
+  attributes: {
+    bottomNav: Schema.Attribute.Component<
+      'document-uploader.bottom-nav',
+      false
+    >;
+    modal: Schema.Attribute.Component<'document-uploader.error-modal', false>;
+  };
+}
+
+export interface DocumentUploaderErrorSuccess extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_successes';
+  info: {
+    description: '';
+    displayName: 'errorSuccess';
+  };
+  attributes: {
+    serverError: Schema.Attribute.Component<
+      'document-uploader.error-success-json',
+      false
+    >;
+    submitFailed: Schema.Attribute.Component<
+      'document-uploader.error-success-json',
+      false
+    >;
+  };
+}
+
+export interface DocumentUploaderErrorSuccessJson
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_error_success_jsons';
+  info: {
+    description: '';
+    displayName: 'errorJson';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<
+      'document-uploader.query-widget',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderFileBlank extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_file_blanks';
+  info: {
+    displayName: 'fileBlank';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderFileNotContainDot
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_file_not_contain_dots';
+  info: {
+    displayName: 'fileNotContainDot';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderGoBackSheet extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_go_back_sheets';
+  info: {
+    displayName: 'goBackSheet';
+  };
+  attributes: {
+    imageUrl: Schema.Attribute.String;
+    primaryText: Schema.Attribute.String;
+    secondaryText: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderModal extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_modals';
+  info: {
+    displayName: 'modal';
+  };
+  attributes: {
+    claimLabel: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderQueryWidget extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_query_widgets';
+  info: {
+    displayName: 'queryWidget';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.Email;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderQueryWidgetSuccess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_query_widget_successes';
+  info: {
+    displayName: 'queryWidgetSuccess';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.Email;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSpanText extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_span_texts';
+  info: {
+    displayName: 'spanText';
+  };
+  attributes: {
+    descriptionLabel: Schema.Attribute.String;
+    maxLabel: Schema.Attribute.String;
+    sizeLabel: Schema.Attribute.String;
+    textLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSubmissionError
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_submission_errors';
+  info: {
+    displayName: 'submissionError';
+  };
+  attributes: {
+    cantUploadLabel: Schema.Attribute.String;
+    claimLabel: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    submitErrorLabel: Schema.Attribute.String;
+    submitLabel: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSubmitDocumentDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_submit_document_dumps';
+  info: {
+    displayName: 'submitDocumentDump';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderSuccess extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_successes';
+  info: {
+    displayName: 'success';
+  };
+  attributes: {
+    copyPrefix: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<
+      'document-uploader.query-widget-success',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface DocumentUploaderUploadRequiredDocuments
+  extends Struct.ComponentSchema {
+  collectionName: 'components_document_uploader_upload_required_documents';
+  info: {
+    description: '';
+    displayName: 'uploadRequiredDocuments';
+  };
+  attributes: {
+    confirmSubmit: Schema.Attribute.Component<
+      'document-uploader.confirm-submit',
+      false
+    >;
+    fileBlank: Schema.Attribute.Component<
+      'document-uploader.file-blank',
+      false
+    >;
+    fileNotContainDot: Schema.Attribute.Component<
+      'document-uploader.file-not-contain-dot',
+      false
+    >;
+    imageUrl: Schema.Attribute.String;
+    spanText: Schema.Attribute.Component<'document-uploader.span-text', false>;
+    title: Schema.Attribute.String;
+    uploadLabel: Schema.Attribute.String;
   };
 }
 
@@ -1105,6 +2559,357 @@ export interface GenerateEkycYesNoOption extends Struct.ComponentSchema {
   };
 }
 
+export interface HealthClaimCity extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_cities';
+  info: {
+    displayName: 'city';
+  };
+  attributes: {
+    emptyStateProps: Schema.Attribute.Component<
+      'health-claim.empty-state-props',
+      false
+    >;
+    label: Schema.Attribute.String;
+    placeHolder: Schema.Attribute.String;
+    sheetTitle: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimClaimSuccess extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_claim_successes';
+  info: {
+    displayName: 'claimSuccess';
+  };
+  attributes: {
+    copyPrefix: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimClaimUnableToProceed
+  extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_claim_unable_to_proceeds';
+  info: {
+    displayName: 'claimUnableToProceed';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<'health-claim.query-widget', false>;
+    retryLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimConfirmation extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_confirmations';
+  info: {
+    displayName: 'confirmation';
+  };
+  attributes: {
+    cancel: Schema.Attribute.String;
+    confirm: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimContactDetails extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_contact_details';
+  info: {
+    displayName: 'contactDetails';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    validEmailLabel: Schema.Attribute.String;
+    validNumberLabel: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimEmptyStateProps extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_empty_state_props';
+  info: {
+    displayName: 'emptyStateProps';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimEnterClaimDetails extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_enter_claim_details';
+  info: {
+    displayName: 'enterClaimDetails';
+  };
+  attributes: {
+    admissionDateLabel: Schema.Attribute.String;
+    approvedAmountLabel: Schema.Attribute.String;
+    claimAmountLabel: Schema.Attribute.String;
+    claimNoLabel: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    dischargeDateLabel: Schema.Attribute.String;
+    enterClaimDetailsLabel: Schema.Attribute.String;
+    enterClaimDetailsPlaceholder: Schema.Attribute.String;
+    errorMessage: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    info: Schema.Attribute.String;
+    intimatedOnInfo: Schema.Attribute.String;
+    intimatedOnLabel: Schema.Attribute.String;
+    intimidatedLabel: Schema.Attribute.String;
+    parentClaimNo: Schema.Attribute.String;
+    parentClaimNoLabel: Schema.Attribute.String;
+    patientNameLabel: Schema.Attribute.String;
+    previousSupplementaryClaims: Schema.Attribute.String;
+    previousSupplementaryClaimsLabel: Schema.Attribute.String;
+    supplementaryClaimInfo: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    trackLabel: Schema.Attribute.String;
+    viewDetailLabel: Schema.Attribute.String;
+    viewLess: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimErrorSuccessJson extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_error_success_jsons';
+  info: {
+    description: '';
+    displayName: 'errorSuccessJson';
+  };
+  attributes: {
+    claimSuccess: Schema.Attribute.Component<
+      'health-claim.claim-success',
+      false
+    >;
+    claimUnableToProceed: Schema.Attribute.Component<
+      'health-claim.claim-unable-to-proceed',
+      false
+    >;
+    confirmation: Schema.Attribute.Component<
+      'health-claim.confirmation',
+      false
+    >;
+    notActiveClaims: Schema.Attribute.Component<
+      'health-claim.not-active-claims',
+      false
+    >;
+    serverError: Schema.Attribute.Component<'health-claim.server-error', false>;
+  };
+}
+
+export interface HealthClaimHealthFiling extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_health_filings';
+  info: {
+    displayName: 'healthFiling';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imaegUrl: Schema.Attribute.String;
+    modes: Schema.Attribute.Component<'health-claim.modes', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimHospitalisation extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_hospitalisations';
+  info: {
+    displayName: 'hospitalisation';
+  };
+  attributes: {};
+}
+
+export interface HealthClaimModes extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_modes';
+  info: {
+    displayName: 'modes';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimNotActiveClaims extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_not_active_claims';
+  info: {
+    description: '';
+    displayName: 'notActiveClaims';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<'health-claim.query-widget', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimPinCode extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_pin_codes';
+  info: {
+    displayName: 'pinCode';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    pinCodeCardLabel: Schema.Attribute.String;
+    placeHolder: Schema.Attribute.String;
+    searchLabel: Schema.Attribute.String;
+    searchResultLabel: Schema.Attribute.String;
+    sheetTitle: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimQueryWidget extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_query_widgets';
+  info: {
+    displayName: 'queryWidget';
+  };
+  attributes: {
+    contactMail: Schema.Attribute.String;
+    contactText: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimQueryWidgetDump extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_query_widget_dumps';
+  info: {
+    displayName: 'queryWidgetDump';
+  };
+  attributes: {};
+}
+
+export interface HealthClaimSelectClaim extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_select_claims';
+  info: {
+    displayName: 'selectClaim';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    intimatedLabel: Schema.Attribute.String;
+    patientLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimSelectHsp extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_select_hsps';
+  info: {
+    description: '';
+    displayName: 'selectHsp';
+  };
+  attributes: {
+    enterHospitalLabel: Schema.Attribute.String;
+    fillHspDetails: Schema.Attribute.Component<
+      'health-claim.title-img-and-desc',
+      false
+    >;
+    imageUrl: Schema.Attribute.String;
+    questionLabel: Schema.Attribute.String;
+    searcghNotFoundDesc: Schema.Attribute.String;
+    searchImageUrl: Schema.Attribute.String;
+    searchNotFoubdLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimServerError extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_server_errors';
+  info: {
+    displayName: 'serverError';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    okayLabel: Schema.Attribute.String;
+    queryWidget: Schema.Attribute.Component<'health-claim.query-widget', false>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimState extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_states';
+  info: {
+    description: '';
+    displayName: 'state';
+  };
+  attributes: {
+    emptyStateProps: Schema.Attribute.Component<
+      'health-claim.empty-state-props',
+      false
+    >;
+    label: Schema.Attribute.String;
+    placeHolder: Schema.Attribute.String;
+    sheetTitle: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimStateCitySelection extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_state_city_selections';
+  info: {
+    description: '';
+    displayName: 'stateCitySelection';
+  };
+  attributes: {
+    city: Schema.Attribute.Component<'health-claim.city', false>;
+    pinCode: Schema.Attribute.Component<'health-claim.pin-code', false>;
+    state: Schema.Attribute.Component<'health-claim.state', false>;
+  };
+}
+
+export interface HealthClaimSupplementary extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_supplementaries';
+  info: {
+    description: '';
+    displayName: 'supplementary';
+  };
+  attributes: {
+    enterClaimDetails: Schema.Attribute.Component<
+      'health-claim.enter-claim-details',
+      false
+    >;
+    queryWidgetDump: Schema.Attribute.Component<
+      'health-claim.query-widget',
+      false
+    >;
+    selectClaim: Schema.Attribute.Component<'health-claim.select-claim', false>;
+  };
+}
+
+export interface HealthClaimTitleImgAndDesc extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_title_img_and_descs';
+  info: {
+    displayName: 'titleImgAndDesc';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface HealthClaimTrackCard extends Struct.ComponentSchema {
+  collectionName: 'components_health_claim_track_cards';
+  info: {
+    displayName: 'trackCard';
+  };
+  attributes: {
+    claimLabel: Schema.Attribute.String;
+  };
+}
+
 export interface HealthTrackAddDocumentCard extends Struct.ComponentSchema {
   collectionName: 'components_health_track_add_document_cards';
   info: {
@@ -1218,6 +3023,7 @@ export interface HealthTrackTrackAClaim extends Struct.ComponentSchema {
       false
     > &
       Schema.Attribute.Required;
+    copyLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     detailsRequired: Schema.Attribute.Component<
       'health-track.details-required',
@@ -1405,6 +3211,19 @@ export interface MotorClaimInput extends Struct.ComponentSchema {
   };
 }
 
+export interface MotorClaimMotorClaimPage extends Struct.ComponentSchema {
+  collectionName: 'components_motor_claim_motor_claim_pages';
+  info: {
+    displayName: 'motorClaimPage';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    stepLabel: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface MotorClaimNatureOfLoss extends Struct.ComponentSchema {
   collectionName: 'components_motor_claim_nature_of_losses';
   info: {
@@ -1531,6 +3350,596 @@ export interface MotorClaimWrongClaimCms extends Struct.ComponentSchema {
     queryWidget: Schema.Attribute.Component<'health-track.query-text', false>;
     title: Schema.Attribute.String;
   };
+}
+
+export interface MotorPolicyTransferAreaInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_area_inputs';
+  info: {
+    displayName: 'areaInput';
+  };
+  attributes: {};
+}
+
+export interface MotorPolicyTransferBottomNav extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_bottom_navs';
+  info: {
+    displayName: 'bottomNav';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferCityDrop extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_city_drops';
+  info: {
+    displayName: 'cityDrop';
+  };
+  attributes: {
+    emptyStateProps: Schema.Attribute.Component<
+      'motor-policy-transfer.empty-state-props',
+      false
+    >;
+    inputLabel: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    searchLabel: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferCmsTranferFilesData
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_cms_tranfer_files_data';
+  info: {
+    displayName: 'cmsTranferFilesData';
+  };
+  attributes: {
+    displayName: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferConfirmPolicyTransferDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_confirm_policy_transfer_dumps';
+  info: {
+    displayName: 'confirmPolicyTransferDump';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    primaryButtonText: Schema.Attribute.String;
+    SecondaryButtonText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferConsentDump extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_consent_dumps';
+  info: {
+    description: '';
+    displayName: 'consentDump';
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    heading: Schema.Attribute.String;
+    idConsent: Schema.Attribute.String;
+    isSelected: Schema.Attribute.Boolean;
+    optional: Schema.Attribute.Boolean;
+    replaceText: Schema.Attribute.String;
+    show: Schema.Attribute.Boolean;
+    text: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferCorrespondenceCont
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_correspondence_conts';
+  info: {
+    description: '';
+    displayName: 'correspondenceCont';
+  };
+  attributes: {
+    areaInput: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+    cityDrop: Schema.Attribute.Component<
+      'motor-policy-transfer.city-drop',
+      false
+    >;
+    houseInput: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+    pincode: Schema.Attribute.Component<'motor-policy-transfer.pincode', false>;
+    stateDrop: Schema.Attribute.Component<
+      'motor-policy-transfer.state-drop',
+      false
+    >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferDobInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_dob_inputs';
+  info: {
+    displayName: 'dobInput';
+  };
+  attributes: {
+    calendarLabel: Schema.Attribute.String;
+    calendarSubtitle: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferEkycApprovedDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_ekyc_approved_dumps';
+  info: {
+    displayName: 'ekycApprovedDump';
+  };
+  attributes: {
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    ekycLabel: Schema.Attribute.String;
+    image: Schema.Attribute.String;
+    nameLabel: Schema.Attribute.String;
+    primaryBtnText: Schema.Attribute.String;
+    secondaryBtnText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferEmptyStateProps
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_empty_state_props';
+  info: {
+    displayName: 'emptyStateProps';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferEngineViewDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_engine_view_dumps';
+  info: {
+    displayName: 'engineViewDump';
+  };
+  attributes: {
+    chassisText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    engineText: Schema.Attribute.String;
+    proceedText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferHouseInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_house_inputs';
+  info: {
+    displayName: 'houseInput';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_inputs';
+  info: {
+    displayName: 'input';
+  };
+  attributes: {
+    verifyIdInput: Schema.Attribute.Component<
+      'motor-policy-transfer.verify-id-input',
+      false
+    >;
+  };
+}
+
+export interface MotorPolicyTransferInputCont extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_input_conts';
+  info: {
+    description: '';
+    displayName: 'inputCont';
+  };
+  attributes: {
+    dropdown: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+    emailInput: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+    numberInput: Schema.Attribute.Component<
+      'motor-policy-transfer.number-input',
+      false
+    >;
+    panInput: Schema.Attribute.Component<
+      'motor-policy-transfer.pan-input',
+      false
+    >;
+  };
+}
+
+export interface MotorPolicyTransferInputTrack extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_input_tracks';
+  info: {
+    description: '';
+    displayName: 'inputTrack';
+  };
+  attributes: {
+    aadharInput: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+    dobInput: Schema.Attribute.Component<
+      'motor-policy-transfer.dob-input',
+      false
+    >;
+    verifyIdInput: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+  };
+}
+
+export interface MotorPolicyTransferLabelAndPlaceholder
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_label_and_placeholders';
+  info: {
+    displayName: 'labelAndPlaceholder';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferMotorTransferRequestFailureCms
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_motor_transfer_request_failure_cms';
+  info: {
+    displayName: 'motorTransferRequestFailureCms';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    queryEmail: Schema.Attribute.Email;
+    queryTitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    transactionNo: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferNoPolicyLinkedDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_no_policy_linked_dumps';
+  info: {
+    displayName: 'noPolicyLinkedDump';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferNomineeDetailsDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_nominee_details_dumps';
+  info: {
+    description: '';
+    displayName: 'nomineeDetailsDump';
+  };
+  attributes: {
+    accidentLabel: Schema.Attribute.String;
+    appointeeCover: Schema.Attribute.String;
+    appointeeDescription: Schema.Attribute.String;
+    appointeeLabel: Schema.Attribute.String;
+    appointeePlaceholder: Schema.Attribute.String;
+    appointeeTitle: Schema.Attribute.String;
+    calendarErrorMessage: Schema.Attribute.String;
+    calenderTitle: Schema.Attribute.String;
+    dobLabel: Schema.Attribute.String;
+    dobPlaceholder: Schema.Attribute.Date;
+    nomineeCover: Schema.Attribute.String;
+    nomineeDescription: Schema.Attribute.String;
+    nomineeLabel: Schema.Attribute.String;
+    nomineePlaceholder: Schema.Attribute.String;
+    nomineeTitle: Schema.Attribute.String;
+    proceedText: Schema.Attribute.String;
+    relationLabel: Schema.Attribute.String;
+    relationPlaceholder: Schema.Attribute.String;
+    relationTitle: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferNumberInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_number_inputs';
+  info: {
+    displayName: 'numberInput';
+  };
+  attributes: {
+    inputErrorMessage: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferOtpSection extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_otp_sections';
+  info: {
+    displayName: 'otpSection';
+  };
+  attributes: {
+    incorrectOtp: Schema.Attribute.String;
+    resendCode: Schema.Attribute.String;
+    resendInLabel: Schema.Attribute.String;
+    resendViaLabel: Schema.Attribute.String;
+    sent: Schema.Attribute.String;
+    smsLabel: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    whatsAppLabel: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferOwnerDetailsDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_owner_details_dumps';
+  info: {
+    description: '';
+    displayName: 'ownerDetailsDump';
+  };
+  attributes: {
+    bottomNav: Schema.Attribute.Component<
+      'motor-policy-transfer.bottom-nav',
+      false
+    >;
+    correspondenceCont: Schema.Attribute.Component<
+      'motor-policy-transfer.correspondence-cont',
+      false
+    >;
+    inputCont: Schema.Attribute.Component<
+      'motor-policy-transfer.input-cont',
+      false
+    >;
+    otpSection: Schema.Attribute.Component<
+      'motor-policy-transfer.otp-section',
+      false
+    >;
+    sectionHeader: Schema.Attribute.Component<
+      'motor-policy-transfer.label-and-placeholder',
+      false
+    >;
+  };
+}
+
+export interface MotorPolicyTransferPanInput extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_pan_inputs';
+  info: {
+    displayName: 'panInput';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferPincode extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_pincodes';
+  info: {
+    displayName: 'pincode';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    pincodeCardLabel: Schema.Attribute.String;
+    pincodeResultLabel: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    searchDropDownTitle: Schema.Attribute.String;
+    searchInputPlaceholder: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferPolicyCardImagesDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_policy_card_images_dumps';
+  info: {
+    displayName: 'policyCardImagesDump';
+  };
+  attributes: {
+    motorImage: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferRadio extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_radios';
+  info: {
+    displayName: 'radio';
+  };
+  attributes: {
+    lableAadhar: Schema.Attribute.String;
+    lableEkyc: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferSectionHeader
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_section_headers';
+  info: {
+    displayName: 'sectionHeader';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferSectionHeaderOwnersDetails
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_section_header_owners_details';
+  info: {
+    displayName: 'sectionHeaderOwnersDetails';
+  };
+  attributes: {};
+}
+
+export interface MotorPolicyTransferStateDrop extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_state_drops';
+  info: {
+    displayName: 'stateDrop';
+  };
+  attributes: {
+    emptyStateProps: Schema.Attribute.Component<
+      'motor-policy-transfer.empty-state-props',
+      false
+    >;
+    inputLabel: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    placeholder: Schema.Attribute.String;
+    sheetTitle: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTrackDump extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_track_dumps';
+  info: {
+    description: '';
+    displayName: 'trackDump';
+  };
+  attributes: {
+    endCont: Schema.Attribute.String;
+    generateLabel: Schema.Attribute.String;
+    info: Schema.Attribute.String;
+    input: Schema.Attribute.Component<
+      'motor-policy-transfer.input-track',
+      false
+    >;
+    radio: Schema.Attribute.Component<'motor-policy-transfer.radio', false>;
+    sectionHeader: Schema.Attribute.Component<
+      'motor-policy-transfer.section-header',
+      false
+    >;
+  };
+}
+
+export interface MotorPolicyTransferTransferDetailsMismatchDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_details_mismatch_dumps';
+  info: {
+    displayName: 'transferDetailsMismatchDump';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTransferFilesDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_files_dumps';
+  info: {
+    displayName: 'transferFilesDump';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    noText: Schema.Attribute.String;
+    question: Schema.Attribute.String;
+    submitText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    uploadsDescription: Schema.Attribute.String;
+    uploadsTitle: Schema.Attribute.String;
+    yesText: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTransferPolicyDump
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_policy_dumps';
+  info: {
+    description: '';
+    displayName: 'transferPolicyDump';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    linkManualButtonText: Schema.Attribute.String;
+    policyNotLinkedText: Schema.Attribute.String;
+    proceedText: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTransferRequestSubmit
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_request_submits';
+  info: {
+    displayName: 'transferRequestSubmit';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    transactionId: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTransferRequestSuccess
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_request_successes';
+  info: {
+    displayName: 'transferRequestSuccess';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    query: Schema.Attribute.String;
+    queryEmail: Schema.Attribute.Email;
+    ticketNo: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferTransferSubmit
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_transfer_submits';
+  info: {
+    displayName: 'transferSubmit';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    copyLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    ticketNo: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    transactionId: Schema.Attribute.String;
+  };
+}
+
+export interface MotorPolicyTransferVerifyIdInput
+  extends Struct.ComponentSchema {
+  collectionName: 'components_motor_policy_transfer_verify_id_inputs';
+  info: {
+    displayName: 'verifyIdInput';
+  };
+  attributes: {};
 }
 
 export interface MotorRenewalAddOnCardDump extends Struct.ComponentSchema {
@@ -1857,6 +4266,220 @@ export interface MotorTrackSomethingWentWrong extends Struct.ComponentSchema {
   };
 }
 
+export interface PolicyManualLinkingCancelledExpired
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_cancelled_expireds';
+  info: {
+    displayName: 'cancelledExpired';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    cancelledDesc: Schema.Attribute.String;
+    cancelledTitle: Schema.Attribute.String;
+    expiredDesc: Schema.Attribute.String;
+    expiredTitle: Schema.Attribute.String;
+    imgUrl: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingCard extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    desc: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingLandingPage extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_landing_pages';
+  info: {
+    description: '';
+    displayName: 'landingPage';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    enterPolicyNumber: Schema.Attribute.String;
+    imgUrl: Schema.Attribute.String;
+    inputHint: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    whenCanContent: Schema.Attribute.Component<
+      'policy-manual-linking.when-can-content',
+      true
+    >;
+    whenCanTitle: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingOtpView extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_otp_views';
+  info: {
+    displayName: 'otpView';
+  };
+  attributes: {
+    incorrectOtp: Schema.Attribute.String;
+    resendCode: Schema.Attribute.String;
+    resendIn: Schema.Attribute.String;
+    resendThrough: Schema.Attribute.String;
+    sent: Schema.Attribute.String;
+    sms: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    whatsapp: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingPersonalInfo
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_personal_infos';
+  info: {
+    displayName: 'personalInfo';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingSelectVerificationType
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_select_verification_types';
+  info: {
+    description: '';
+    displayName: 'selectVerificationType';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    imgUrl: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    types: Schema.Attribute.Component<'policy-manual-linking.types', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 2;
+        },
+        number
+      >;
+  };
+}
+
+export interface PolicyManualLinkingThankYou extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_thank_yous';
+  info: {
+    displayName: 'thankYou';
+  };
+  attributes: {
+    alreadySubmittedTitle: Schema.Attribute.String;
+    buttonLabel: Schema.Attribute.String;
+    imgUrl: Schema.Attribute.String;
+    submittingDesc: Schema.Attribute.String;
+    submittingTitle: Schema.Attribute.String;
+    ticketNo: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingTypes extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_types';
+  info: {
+    description: '';
+    displayName: 'types';
+  };
+  attributes: {
+    desc: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingUnableToFetch
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_unable_to_fetches';
+  info: {
+    displayName: 'unableToFetch';
+  };
+  attributes: {
+    buttonLabel: Schema.Attribute.String;
+    imgUrl: Schema.Attribute.String;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicyManualLinkingWhenCanContent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_manual_linking_when_can_contents';
+  info: {
+    displayName: 'whenCanContent';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicySelectionDownloadPolicyRequest
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_selection_download_policy_requests';
+  info: {
+    displayName: 'downloadPolicyRequest';
+  };
+  attributes: {
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicySelectionImages extends Struct.ComponentSchema {
+  collectionName: 'components_policy_selection_images';
+  info: {
+    displayName: 'images';
+  };
+  attributes: {
+    default: Schema.Attribute.String;
+    health: Schema.Attribute.String;
+    motor: Schema.Attribute.String;
+    pet: Schema.Attribute.String;
+  };
+}
+
+export interface PolicySelectionNoPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_policy_selection_no_policies';
+  info: {
+    description: '';
+    displayName: 'noPolicy';
+  };
+  attributes: {
+    buttonText: Schema.Attribute.String;
+    description: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface PolicySelectionPolicySelectionCmsData
+  extends Struct.ComponentSchema {
+  collectionName: 'components_policy_selection_policy_selection_cms_data';
+  info: {
+    description: '';
+    displayName: 'policySelectionCmsData';
+  };
+  attributes: {
+    cannotSeePolicy: Schema.Attribute.String;
+    downloadPolicyRequest: Schema.Attribute.Component<
+      'policy-selection.download-policy-request',
+      false
+    >;
+    images: Schema.Attribute.Component<'policy-selection.images', false>;
+    noPolicy: Schema.Attribute.Component<'policy-selection.no-policy', false>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface PreviousYearPolicyUploadFailure
   extends Struct.ComponentSchema {
   collectionName: 'components_previous_year_policy_upload_failures';
@@ -1992,6 +4615,466 @@ export interface PreviousYearPolicyUploadUploadSection
   attributes: {
     btn: Schema.Attribute.String;
     header: Schema.Attribute.String;
+  };
+}
+
+export interface QuickActionAddAccountDetails extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_add_account_details';
+  info: {
+    displayName: 'addAccountDetails';
+  };
+  attributes: {
+    addAccountDetails: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionCard extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    imageUrl: Schema.Attribute.String;
+    key: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface QuickActionChangeRequestForm extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_change_request_forms';
+  info: {
+    displayName: 'changeRequestForm';
+  };
+  attributes: {
+    changeRequestForm: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionChangesInPolicyRenewal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_changes_in_policy_renewals';
+  info: {
+    displayName: 'changesInPolicyRenewal';
+  };
+  attributes: {
+    changesInPolicyRenewal: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionChecklistForChange extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_checklist_for_changes';
+  info: {
+    displayName: 'checklistForChange';
+  };
+  attributes: {
+    checklistForChange: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionClaimQuery extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_claim_queries';
+  info: {
+    displayName: 'claimQuery';
+  };
+  attributes: {
+    claimQuery: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionClaimRegistration extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_claim_registrations';
+  info: {
+    displayName: 'claimRegistration';
+  };
+  attributes: {
+    claimRegistration: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionCustomerDueDiligence
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_customer_due_diligences';
+  info: {
+    displayName: 'customerDueDiligence';
+  };
+  attributes: {
+    customerDueDiligence: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionDeactivateAutoRenewal
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_deactivate_auto_renewals';
+  info: {
+    displayName: 'deactivateAutoRenewal';
+  };
+  attributes: {
+    deactivateAutoRenewal: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionDiseaseDisclosure extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_disease_disclosures';
+  info: {
+    displayName: 'diseaseDisclosure';
+  };
+  attributes: {
+    diseaseDisclosure: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionEkycLink extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_ekyc_links';
+  info: {
+    displayName: 'ekycLink';
+  };
+  attributes: {
+    ekycLink: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionEkycProcedure extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_ekyc_procedures';
+  info: {
+    displayName: 'ekycProcedure';
+  };
+  attributes: {
+    ekycProcedure: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionEkycRegistration extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_ekyc_registrations';
+  info: {
+    displayName: 'ekycRegistration';
+  };
+  attributes: {
+    ekycRegistration: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionEkycTracking extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_ekyc_trackings';
+  info: {
+    displayName: 'ekycTracking';
+  };
+  attributes: {
+    ekycTracking: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionEmailPolicyCopy extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_email_policy_copies';
+  info: {
+    displayName: 'emailPolicyCopy';
+  };
+  attributes: {
+    emailPolicyCopy: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionHealthCard extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_health_cards';
+  info: {
+    displayName: 'healthCard';
+  };
+  attributes: {
+    healthCard: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionInstallmentPayment extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_installment_payments';
+  info: {
+    displayName: 'installmentPayment';
+  };
+  attributes: {
+    installmentPayment: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionInstallmentTracker extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_installment_trackers';
+  info: {
+    displayName: 'installmentTracker';
+  };
+  attributes: {
+    installmentTracker: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionKnowYourPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_know_your_policies';
+  info: {
+    displayName: 'knowYourPolicy';
+  };
+  attributes: {
+    knowYourPolicy: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionKyc extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_kycs';
+  info: {
+    displayName: 'kyc';
+  };
+  attributes: {
+    kyc: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionLinkEia extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_link_eias';
+  info: {
+    displayName: 'linkEia';
+  };
+  attributes: {
+    linkEia: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionMakePayments extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_make_payments';
+  info: {
+    displayName: 'makePayments';
+  };
+  attributes: {
+    makePayments: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionOdometerReadingUpload
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_odometer_reading_uploads';
+  info: {
+    displayName: 'odometerReadingUpload';
+  };
+  attributes: {
+    odometerReadingUpload: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionPawsAndClaws extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_paws_and_claws';
+  info: {
+    displayName: 'paws&Claws';
+  };
+  attributes: {
+    pawsAndClaws: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionPolicyAlterations extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_policy_alterations';
+  info: {
+    displayName: 'policyAlterations';
+  };
+  attributes: {
+    policyAlterations: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionPolicyCancellationRequest
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_policy_cancellation_requests';
+  info: {
+    displayName: 'policyCancellationRequest';
+  };
+  attributes: {
+    policyCancellationRequest: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionPolicyDispatch extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_policy_dispatches';
+  info: {
+    displayName: 'policyDispatch';
+  };
+  attributes: {
+    policyDispatch: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionPreFilledClaimForm extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_pre_filled_claim_forms';
+  info: {
+    displayName: 'preFilledClaimForm';
+  };
+  attributes: {
+    preFilledClaimForm: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionPrePolicyReports extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_pre_policy_reports';
+  info: {
+    displayName: 'prePolicyReports';
+  };
+  attributes: {
+    prePolicyReports: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionPrevYearPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_prev_year_policies';
+  info: {
+    displayName: 'prevYearPolicy';
+  };
+  attributes: {
+    prevYearPolicy: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionQuickActionsDump extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_quick_actions_dumps';
+  info: {
+    displayName: 'quickActionsDump';
+  };
+  attributes: {};
+}
+
+export interface QuickActionRaiseQuery extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_raise_queries';
+  info: {
+    displayName: 'raiseQuery';
+  };
+  attributes: {
+    raiseQuery: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionRequestProposalForm extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_request_proposal_forms';
+  info: {
+    displayName: 'requestProposalForm';
+  };
+  attributes: {
+    requestProposalForm: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionReverificationNcbPyp
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_reverification_ncb_pyps';
+  info: {
+    displayName: 'reverificationNcbPyp';
+  };
+  attributes: {
+    reverificationNcbPyp: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionTaxCertificate extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_tax_certificates';
+  info: {
+    displayName: 'taxCertificate';
+  };
+  attributes: {
+    taxCertificate: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionTrackCancellationStatus
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_track_cancellation_statuses';
+  info: {
+    displayName: 'trackCancellationStatus';
+  };
+  attributes: {
+    trackCancellationStatus: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionTrackClaim extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_track_claims';
+  info: {
+    displayName: 'trackClaim';
+  };
+  attributes: {
+    trackClaim: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionTrackPremiumRecovery
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_track_premium_recoveries';
+  info: {
+    displayName: 'trackPremiumRecovery';
+  };
+  attributes: {
+    trackPremiumRecovery: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionTransferOfInsuranceMotor
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_transfer_of_insurance_motors';
+  info: {
+    displayName: 'transferOfInsuranceMotor';
+  };
+  attributes: {
+    transferOfInsuranceMotor: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionUpdateCardDetails extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_update_card_details';
+  info: {
+    displayName: 'UpdateCardDetails';
+  };
+  attributes: {
+    UpdateCardDetails: Schema.Attribute.Component<'quick-action.card', false>;
+  };
+}
+
+export interface QuickActionUpdateContactDetails
+  extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_update_contact_details';
+  info: {
+    displayName: 'updateContactDetails';
+  };
+  attributes: {
+    updateContactDetails: Schema.Attribute.Component<
+      'quick-action.card',
+      false
+    >;
+  };
+}
+
+export interface QuickActionUploadHealthDocs extends Struct.ComponentSchema {
+  collectionName: 'components_quick_action_upload_health_docs';
+  info: {
+    displayName: 'uploadHealthDocs';
+  };
+  attributes: {
+    uploadHealthDocs: Schema.Attribute.Component<'quick-action.card', false>;
   };
 }
 
@@ -2166,6 +5249,7 @@ export interface SharedTitleDescription extends Struct.ComponentSchema {
     displayName: 'title-description';
   };
   attributes: {
+    claimLabel: Schema.Attribute.String;
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -2193,6 +5277,38 @@ declare module '@strapi/strapi' {
       'article-components.quote-banner': ArticleComponentsQuoteBanner;
       'article-components.rich-text-json': ArticleComponentsRichTextJson;
       'article-components.video-url': ArticleComponentsVideoUrl;
+      'claims-static.award-cont': ClaimsStaticAwardCont;
+      'claims-static.bullet-points-claim': ClaimsStaticBulletPointsClaim;
+      'claims-static.button': ClaimsStaticButton;
+      'claims-static.car-insurance': ClaimsStaticCarInsurance;
+      'claims-static.cattle-insurance-dump': ClaimsStaticCattleInsuranceDump;
+      'claims-static.claim-steps': ClaimsStaticClaimSteps;
+      'claims-static.claim-tabs': ClaimsStaticClaimTabs;
+      'claims-static.critical-ilness-insurance': ClaimsStaticCriticalIlnessInsurance;
+      'claims-static.document-checklist': ClaimsStaticDocumentChecklist;
+      'claims-static.group-medical-insurance': ClaimsStaticGroupMedicalInsurance;
+      'claims-static.group-personal-insurance': ClaimsStaticGroupPersonalInsurance;
+      'claims-static.group-travel-insurance': ClaimsStaticGroupTravelInsurance;
+      'claims-static.heading': ClaimsStaticHeading;
+      'claims-static.heading-claim': ClaimsStaticHeadingClaim;
+      'claims-static.health-insurance': ClaimsStaticHealthInsurance;
+      'claims-static.info-cont': ClaimsStaticInfoCont;
+      'claims-static.kidnap-extortion-insurance-dump': ClaimsStaticKidnapExtortionInsuranceDump;
+      'claims-static.label-cont': ClaimsStaticLabelCont;
+      'claims-static.marine-hull-insurance-dump': ClaimsStaticMarineHullInsuranceDump;
+      'claims-static.personal-accident-insurance': ClaimsStaticPersonalAccidentInsurance;
+      'claims-static.points-container': ClaimsStaticPointsContainer;
+      'claims-static.rainfall-index-insurance-dump': ClaimsStaticRainfallIndexInsuranceDump;
+      'claims-static.reimbursement-steps': ClaimsStaticReimbursementSteps;
+      'claims-static.section-heading': ClaimsStaticSectionHeading;
+      'claims-static.sections': ClaimsStaticSections;
+      'claims-static.tabs': ClaimsStaticTabs;
+      'claims-static.tabs-cont': ClaimsStaticTabsCont;
+      'claims-static.travel-insurance': ClaimsStaticTravelInsurance;
+      'claims-static.two-wheeler-insurance': ClaimsStaticTwoWheelerInsurance;
+      'claims.banner': ClaimsBanner;
+      'claims.claim-banner': ClaimsClaimBanner;
+      'claims.tabs-claim-page': ClaimsTabsClaimPage;
       'customer-due-diligence.annual-income': CustomerDueDiligenceAnnualIncome;
       'customer-due-diligence.customer-due-diligence': CustomerDueDiligenceCustomerDueDiligence;
       'customer-due-diligence.ekyc-details': CustomerDueDiligenceEkycDetails;
@@ -2210,6 +5326,78 @@ declare module '@strapi/strapi' {
       'customer-due-diligence.tip-info': CustomerDueDiligenceTipInfo;
       'customer-due-diligence.title': CustomerDueDiligenceTitle;
       'customer-due-diligence.yes': CustomerDueDiligenceYes;
+      'dashboard-buy-insurance.card': DashboardBuyInsuranceCard;
+      'dashboard-buy-insurance.commercial': DashboardBuyInsuranceCommercial;
+      'dashboard-buy-insurance.corporate': DashboardBuyInsuranceCorporate;
+      'dashboard-buy-insurance.cyber': DashboardBuyInsuranceCyber;
+      'dashboard-buy-insurance.four-wheeler': DashboardBuyInsuranceFourWheeler;
+      'dashboard-buy-insurance.health': DashboardBuyInsuranceHealth;
+      'dashboard-buy-insurance.home': DashboardBuyInsuranceHome;
+      'dashboard-buy-insurance.link-policy': DashboardBuyInsuranceLinkPolicy;
+      'dashboard-buy-insurance.needs-your-attention': DashboardBuyInsuranceNeedsYourAttention;
+      'dashboard-buy-insurance.pet': DashboardBuyInsurancePet;
+      'dashboard-buy-insurance.pmsby': DashboardBuyInsurancePmsby;
+      'dashboard-buy-insurance.resume-journey': DashboardBuyInsuranceResumeJourney;
+      'dashboard-buy-insurance.travel': DashboardBuyInsuranceTravel;
+      'dashboard-buy-insurance.two-wheeler': DashboardBuyInsuranceTwoWheeler;
+      'dashboard-ecosystem.card': DashboardEcosystemCard;
+      'dashboard-ecosystem.dashboard-ecosystem': DashboardEcosystemDashboardEcosystem;
+      'dashboard-ecosystem.health': DashboardEcosystemHealth;
+      'dashboard-ecosystem.pets': DashboardEcosystemPets;
+      'dashboard-ecosystem.title': DashboardEcosystemTitle;
+      'dashboard-explore-fourwheeler.card': DashboardExploreFourwheelerCard;
+      'dashboard-explore-fourwheeler.dashboard-explore-fourwheeler': DashboardExploreFourwheelerDashboardExploreFourwheeler;
+      'dashboard-explore-fourwheeler.four-wheeler': DashboardExploreFourwheelerFourWheeler;
+      'dashboard-explore-fourwheeler.two-wheeler': DashboardExploreFourwheelerTwoWheeler;
+      'dashboard-explore-more.card': DashboardExploreMoreCard;
+      'dashboard-explore-more.card-one': DashboardExploreMoreCardOne;
+      'dashboard-explore-more.card-three': DashboardExploreMoreCardThree;
+      'dashboard-explore-more.card-two': DashboardExploreMoreCardTwo;
+      'dashboard-explore-more.dashboard-explore-more': DashboardExploreMoreDashboardExploreMore;
+      'dashboard-latest-in-hdfc.card': DashboardLatestInHdfcCard;
+      'dashboard-latest-in-hdfc.dashboard-latest-in-hdfc': DashboardLatestInHdfcDashboardLatestInHdfc;
+      'dashboard-quick-action.card': DashboardQuickActionCard;
+      'dashboard-quick-action.claim-registration': DashboardQuickActionClaimRegistration;
+      'dashboard-quick-action.dashboard-quick-action': DashboardQuickActionDashboardQuickAction;
+      'dashboard-quick-action.ekyc-procedure': DashboardQuickActionEkycProcedure;
+      'dashboard-quick-action.ekyc-registration': DashboardQuickActionEkycRegistration;
+      'dashboard-quick-action.link-eia': DashboardQuickActionLinkEia;
+      'dashboard-quick-action.renew-policy': DashboardQuickActionRenewPolicy;
+      'dashboard-quick-action.track-claim': DashboardQuickActionTrackClaim;
+      'dashboard-trusted-by-customer.card': DashboardTrustedByCustomerCard;
+      'dashboard-trusted-by-customer.cashless-network': DashboardTrustedByCustomerCashlessNetwork;
+      'dashboard-trusted-by-customer.claim-settlement-rate': DashboardTrustedByCustomerClaimSettlementRate;
+      'dashboard-trusted-by-customer.customer-support': DashboardTrustedByCustomerCustomerSupport;
+      'dashboard-trusted-by-customer.dashboard-trusted-by-customer': DashboardTrustedByCustomerDashboardTrustedByCustomer;
+      'dashboard-trusted-by-customer.happy-customers': DashboardTrustedByCustomerHappyCustomers;
+      'dashboard.card-alignment': DashboardCardAlignment;
+      'dashboard.dashboard-cms-data': DashboardDashboardCmsData;
+      'dashboard.dashboard-connect-with-us-cms': DashboardDashboardConnectWithUsCms;
+      'dashboard.dashboard-newsletter-cms': DashboardDashboardNewsletterCms;
+      'dashboard.ecosystem-qr-cms': DashboardEcosystemQrCms;
+      'dashboard.support-cms': DashboardSupportCms;
+      'document-uploader.bottom-nav': DocumentUploaderBottomNav;
+      'document-uploader.camera': DocumentUploaderCamera;
+      'document-uploader.claim-document-list': DocumentUploaderClaimDocumentList;
+      'document-uploader.confirm-submit': DocumentUploaderConfirmSubmit;
+      'document-uploader.document-modal': DocumentUploaderDocumentModal;
+      'document-uploader.document-progress-modal': DocumentUploaderDocumentProgressModal;
+      'document-uploader.document-upload-modal': DocumentUploaderDocumentUploadModal;
+      'document-uploader.error-modal': DocumentUploaderErrorModal;
+      'document-uploader.error-screen': DocumentUploaderErrorScreen;
+      'document-uploader.error-success': DocumentUploaderErrorSuccess;
+      'document-uploader.error-success-json': DocumentUploaderErrorSuccessJson;
+      'document-uploader.file-blank': DocumentUploaderFileBlank;
+      'document-uploader.file-not-contain-dot': DocumentUploaderFileNotContainDot;
+      'document-uploader.go-back-sheet': DocumentUploaderGoBackSheet;
+      'document-uploader.modal': DocumentUploaderModal;
+      'document-uploader.query-widget': DocumentUploaderQueryWidget;
+      'document-uploader.query-widget-success': DocumentUploaderQueryWidgetSuccess;
+      'document-uploader.span-text': DocumentUploaderSpanText;
+      'document-uploader.submission-error': DocumentUploaderSubmissionError;
+      'document-uploader.submit-document-dump': DocumentUploaderSubmitDocumentDump;
+      'document-uploader.success': DocumentUploaderSuccess;
+      'document-uploader.upload-required-documents': DocumentUploaderUploadRequiredDocuments;
       'ekyc-track.aadhar-input': EkycTrackAadharInput;
       'ekyc-track.aadhar-verification': EkycTrackAadharVerification;
       'ekyc-track.aadhar-verification-error': EkycTrackAadharVerificationError;
@@ -2266,6 +5454,29 @@ declare module '@strapi/strapi' {
       'generate-ekyc.proceed-to-hdfc': GenerateEkycProceedToHdfc;
       'generate-ekyc.state': GenerateEkycState;
       'generate-ekyc.yes-no-option': GenerateEkycYesNoOption;
+      'health-claim.city': HealthClaimCity;
+      'health-claim.claim-success': HealthClaimClaimSuccess;
+      'health-claim.claim-unable-to-proceed': HealthClaimClaimUnableToProceed;
+      'health-claim.confirmation': HealthClaimConfirmation;
+      'health-claim.contact-details': HealthClaimContactDetails;
+      'health-claim.empty-state-props': HealthClaimEmptyStateProps;
+      'health-claim.enter-claim-details': HealthClaimEnterClaimDetails;
+      'health-claim.error-success-json': HealthClaimErrorSuccessJson;
+      'health-claim.health-filing': HealthClaimHealthFiling;
+      'health-claim.hospitalisation': HealthClaimHospitalisation;
+      'health-claim.modes': HealthClaimModes;
+      'health-claim.not-active-claims': HealthClaimNotActiveClaims;
+      'health-claim.pin-code': HealthClaimPinCode;
+      'health-claim.query-widget': HealthClaimQueryWidget;
+      'health-claim.query-widget-dump': HealthClaimQueryWidgetDump;
+      'health-claim.select-claim': HealthClaimSelectClaim;
+      'health-claim.select-hsp': HealthClaimSelectHsp;
+      'health-claim.server-error': HealthClaimServerError;
+      'health-claim.state': HealthClaimState;
+      'health-claim.state-city-selection': HealthClaimStateCitySelection;
+      'health-claim.supplementary': HealthClaimSupplementary;
+      'health-claim.title-img-and-desc': HealthClaimTitleImgAndDesc;
+      'health-claim.track-card': HealthClaimTrackCard;
       'health-track.add-document-card': HealthTrackAddDocumentCard;
       'health-track.details-required': HealthTrackDetailsRequired;
       'health-track.error-encountered': HealthTrackErrorEncountered;
@@ -2286,6 +5497,7 @@ declare module '@strapi/strapi' {
       'motor-claim.enter-claim-details': MotorClaimEnterClaimDetails;
       'motor-claim.enter-loss-incur': MotorClaimEnterLossIncur;
       'motor-claim.input': MotorClaimInput;
+      'motor-claim.motor-claim-page': MotorClaimMotorClaimPage;
       'motor-claim.nature-of-loss': MotorClaimNatureOfLoss;
       'motor-claim.progressive-step-bar': MotorClaimProgressiveStepBar;
       'motor-claim.select-nature': MotorClaimSelectNature;
@@ -2296,6 +5508,43 @@ declare module '@strapi/strapi' {
       'motor-claim.unavailable-claim-cms': MotorClaimUnavailableClaimCms;
       'motor-claim.who-is-claiming': MotorClaimWhoIsClaiming;
       'motor-claim.wrong-claim-cms': MotorClaimWrongClaimCms;
+      'motor-policy-transfer.area-input': MotorPolicyTransferAreaInput;
+      'motor-policy-transfer.bottom-nav': MotorPolicyTransferBottomNav;
+      'motor-policy-transfer.city-drop': MotorPolicyTransferCityDrop;
+      'motor-policy-transfer.cms-tranfer-files-data': MotorPolicyTransferCmsTranferFilesData;
+      'motor-policy-transfer.confirm-policy-transfer-dump': MotorPolicyTransferConfirmPolicyTransferDump;
+      'motor-policy-transfer.consent-dump': MotorPolicyTransferConsentDump;
+      'motor-policy-transfer.correspondence-cont': MotorPolicyTransferCorrespondenceCont;
+      'motor-policy-transfer.dob-input': MotorPolicyTransferDobInput;
+      'motor-policy-transfer.ekyc-approved-dump': MotorPolicyTransferEkycApprovedDump;
+      'motor-policy-transfer.empty-state-props': MotorPolicyTransferEmptyStateProps;
+      'motor-policy-transfer.engine-view-dump': MotorPolicyTransferEngineViewDump;
+      'motor-policy-transfer.house-input': MotorPolicyTransferHouseInput;
+      'motor-policy-transfer.input': MotorPolicyTransferInput;
+      'motor-policy-transfer.input-cont': MotorPolicyTransferInputCont;
+      'motor-policy-transfer.input-track': MotorPolicyTransferInputTrack;
+      'motor-policy-transfer.label-and-placeholder': MotorPolicyTransferLabelAndPlaceholder;
+      'motor-policy-transfer.motor-transfer-request-failure-cms': MotorPolicyTransferMotorTransferRequestFailureCms;
+      'motor-policy-transfer.no-policy-linked-dump': MotorPolicyTransferNoPolicyLinkedDump;
+      'motor-policy-transfer.nominee-details-dump': MotorPolicyTransferNomineeDetailsDump;
+      'motor-policy-transfer.number-input': MotorPolicyTransferNumberInput;
+      'motor-policy-transfer.otp-section': MotorPolicyTransferOtpSection;
+      'motor-policy-transfer.owner-details-dump': MotorPolicyTransferOwnerDetailsDump;
+      'motor-policy-transfer.pan-input': MotorPolicyTransferPanInput;
+      'motor-policy-transfer.pincode': MotorPolicyTransferPincode;
+      'motor-policy-transfer.policy-card-images-dump': MotorPolicyTransferPolicyCardImagesDump;
+      'motor-policy-transfer.radio': MotorPolicyTransferRadio;
+      'motor-policy-transfer.section-header': MotorPolicyTransferSectionHeader;
+      'motor-policy-transfer.section-header-owners-details': MotorPolicyTransferSectionHeaderOwnersDetails;
+      'motor-policy-transfer.state-drop': MotorPolicyTransferStateDrop;
+      'motor-policy-transfer.track-dump': MotorPolicyTransferTrackDump;
+      'motor-policy-transfer.transfer-details-mismatch-dump': MotorPolicyTransferTransferDetailsMismatchDump;
+      'motor-policy-transfer.transfer-files-dump': MotorPolicyTransferTransferFilesDump;
+      'motor-policy-transfer.transfer-policy-dump': MotorPolicyTransferTransferPolicyDump;
+      'motor-policy-transfer.transfer-request-submit': MotorPolicyTransferTransferRequestSubmit;
+      'motor-policy-transfer.transfer-request-success': MotorPolicyTransferTransferRequestSuccess;
+      'motor-policy-transfer.transfer-submit': MotorPolicyTransferTransferSubmit;
+      'motor-policy-transfer.verify-id-input': MotorPolicyTransferVerifyIdInput;
       'motor-renewal.add-on-card-dump': MotorRenewalAddOnCardDump;
       'motor-renewal.add-on-checkbox-input-dump': MotorRenewalAddOnCheckboxInputDump;
       'motor-renewal.back-button-request-callback-dump': MotorRenewalBackButtonRequestCallbackDump;
@@ -2319,6 +5568,20 @@ declare module '@strapi/strapi' {
       'motor-track.query-text': MotorTrackQueryText;
       'motor-track.query-widget': MotorTrackQueryWidget;
       'motor-track.something-went-wrong': MotorTrackSomethingWentWrong;
+      'policy-manual-linking.cancelled-expired': PolicyManualLinkingCancelledExpired;
+      'policy-manual-linking.card': PolicyManualLinkingCard;
+      'policy-manual-linking.landing-page': PolicyManualLinkingLandingPage;
+      'policy-manual-linking.otp-view': PolicyManualLinkingOtpView;
+      'policy-manual-linking.personal-info': PolicyManualLinkingPersonalInfo;
+      'policy-manual-linking.select-verification-type': PolicyManualLinkingSelectVerificationType;
+      'policy-manual-linking.thank-you': PolicyManualLinkingThankYou;
+      'policy-manual-linking.types': PolicyManualLinkingTypes;
+      'policy-manual-linking.unable-to-fetch': PolicyManualLinkingUnableToFetch;
+      'policy-manual-linking.when-can-content': PolicyManualLinkingWhenCanContent;
+      'policy-selection.download-policy-request': PolicySelectionDownloadPolicyRequest;
+      'policy-selection.images': PolicySelectionImages;
+      'policy-selection.no-policy': PolicySelectionNoPolicy;
+      'policy-selection.policy-selection-cms-data': PolicySelectionPolicySelectionCmsData;
       'previous-year-policy-upload.failure': PreviousYearPolicyUploadFailure;
       'previous-year-policy-upload.header': PreviousYearPolicyUploadHeader;
       'previous-year-policy-upload.previous-year-policy-upload': PreviousYearPolicyUploadPreviousYearPolicyUpload;
@@ -2328,6 +5591,48 @@ declare module '@strapi/strapi' {
       'previous-year-policy-upload.status': PreviousYearPolicyUploadStatus;
       'previous-year-policy-upload.success': PreviousYearPolicyUploadSuccess;
       'previous-year-policy-upload.upload-section': PreviousYearPolicyUploadUploadSection;
+      'quick-action.add-account-details': QuickActionAddAccountDetails;
+      'quick-action.card': QuickActionCard;
+      'quick-action.change-request-form': QuickActionChangeRequestForm;
+      'quick-action.changes-in-policy-renewal': QuickActionChangesInPolicyRenewal;
+      'quick-action.checklist-for-change': QuickActionChecklistForChange;
+      'quick-action.claim-query': QuickActionClaimQuery;
+      'quick-action.claim-registration': QuickActionClaimRegistration;
+      'quick-action.customer-due-diligence': QuickActionCustomerDueDiligence;
+      'quick-action.deactivate-auto-renewal': QuickActionDeactivateAutoRenewal;
+      'quick-action.disease-disclosure': QuickActionDiseaseDisclosure;
+      'quick-action.ekyc-link': QuickActionEkycLink;
+      'quick-action.ekyc-procedure': QuickActionEkycProcedure;
+      'quick-action.ekyc-registration': QuickActionEkycRegistration;
+      'quick-action.ekyc-tracking': QuickActionEkycTracking;
+      'quick-action.email-policy-copy': QuickActionEmailPolicyCopy;
+      'quick-action.health-card': QuickActionHealthCard;
+      'quick-action.installment-payment': QuickActionInstallmentPayment;
+      'quick-action.installment-tracker': QuickActionInstallmentTracker;
+      'quick-action.know-your-policy': QuickActionKnowYourPolicy;
+      'quick-action.kyc': QuickActionKyc;
+      'quick-action.link-eia': QuickActionLinkEia;
+      'quick-action.make-payments': QuickActionMakePayments;
+      'quick-action.odometer-reading-upload': QuickActionOdometerReadingUpload;
+      'quick-action.paws-and-claws': QuickActionPawsAndClaws;
+      'quick-action.policy-alterations': QuickActionPolicyAlterations;
+      'quick-action.policy-cancellation-request': QuickActionPolicyCancellationRequest;
+      'quick-action.policy-dispatch': QuickActionPolicyDispatch;
+      'quick-action.pre-filled-claim-form': QuickActionPreFilledClaimForm;
+      'quick-action.pre-policy-reports': QuickActionPrePolicyReports;
+      'quick-action.prev-year-policy': QuickActionPrevYearPolicy;
+      'quick-action.quick-actions-dump': QuickActionQuickActionsDump;
+      'quick-action.raise-query': QuickActionRaiseQuery;
+      'quick-action.request-proposal-form': QuickActionRequestProposalForm;
+      'quick-action.reverification-ncb-pyp': QuickActionReverificationNcbPyp;
+      'quick-action.tax-certificate': QuickActionTaxCertificate;
+      'quick-action.track-cancellation-status': QuickActionTrackCancellationStatus;
+      'quick-action.track-claim': QuickActionTrackClaim;
+      'quick-action.track-premium-recovery': QuickActionTrackPremiumRecovery;
+      'quick-action.transfer-of-insurance-motor': QuickActionTransferOfInsuranceMotor;
+      'quick-action.update-card-details': QuickActionUpdateCardDetails;
+      'quick-action.update-contact-details': QuickActionUpdateContactDetails;
+      'quick-action.upload-health-docs': QuickActionUploadHealthDocs;
       'shared.bottom': SharedBottom;
       'shared.bottom-cards': SharedBottomCards;
       'shared.cards': SharedCards;
