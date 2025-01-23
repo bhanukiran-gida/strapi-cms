@@ -42,12 +42,6 @@
       "repeatable": false,
       "component": "motor-policy-transfer.transfer-details-mismatch-dump"
     },
-    "trackDump": {
-      "displayName": "trackDump",
-      "type": "component",
-      "repeatable": false,
-      "component": "motor-policy-transfer.track-dump"
-    },
     "ekycApprovedDump": {
       "displayName": "ekycApprovedDump",
       "type": "component",
@@ -113,6 +107,12 @@
       "type": "component",
       "repeatable": false,
       "component": "motor-policy-transfer.owner-details-dump"
+    },
+    "newOwnerLabel": {
+      "displayName": "newOwnerLabel",
+      "type": "component",
+      "repeatable": false,
+      "component": "motor-policy-transfer.new-owner-label"
     }
   }
 }
