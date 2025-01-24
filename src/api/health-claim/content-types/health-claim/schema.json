@@ -53,9 +53,10 @@
       "component": "health-claim.select-hsp"
     },
     "contactDetails": {
+      "displayName": "contactDetails-2",
       "type": "component",
       "repeatable": false,
-      "component": "health-claim.contact-details"
+      "component": "health-claim.contact-details-2"
     },
     "claimDetails": {
       "type": "component",
