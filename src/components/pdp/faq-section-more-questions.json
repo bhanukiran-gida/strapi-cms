@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_pdp_pdp_title_desc_images",
+  "collectionName": "components_pdp_faq_section_more_questions",
   "info": {
-    "displayName": "Pdp-TitleDescImage",
-    "description": ""
+    "displayName": "FaqSectionMoreQuestions"
   },
   "options": {},
   "attributes": {
@@ -10,13 +9,13 @@
       "type": "string"
     },
     "desc": {
+      "type": "text"
+    },
+    "button": {
       "type": "string"
     },
     "image": {
       "type": "string"
-    },
-    "bottomText": {
-      "type": "text"
     },
     "link": {
       "type": "string"
