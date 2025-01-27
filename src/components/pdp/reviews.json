@@ -1,24 +1,26 @@
 {
-  "collectionName": "components_pdp_pdp_title_desc_images",
+  "collectionName": "components_pdp_reviews",
   "info": {
-    "displayName": "Pdp-TitleDescImage",
-    "description": ""
+    "displayName": "reviews"
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "desc": {
-      "type": "string"
-    },
     "image": {
       "type": "string"
     },
-    "bottomText": {
+    "name": {
+      "type": "string"
+    },
+    "stars": {
+      "type": "string"
+    },
+    "review": {
+      "type": "string"
+    },
+    "description": {
       "type": "text"
     },
-    "link": {
+    "date": {
       "type": "string"
     }
   }
