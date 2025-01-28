@@ -19,12 +19,9 @@
     "sections": {
       "type": "dynamiczone",
       "components": [
-        "pdp.trustmarkers",
         "pdp.pdp-title-desc-image",
         "pdp.pdp-find-nearest-locator",
         "pdp.pdp-clickable-cards",
-        "pdp.locator-list",
-        "pdp.clickable-cards-list",
         "pdp.pdp-why-should-you-buy",
         "pdp.pdp-why-choose-hdfc",
         "pdp.pdp-videos",
