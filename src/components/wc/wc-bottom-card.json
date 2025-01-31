@@ -1,25 +1,24 @@
 {
-  "collectionName": "components_travel_banners",
+  "collectionName": "components_wc_wc_bottom_cards",
   "info": {
-    "displayName": "banner",
-    "icon": "",
+    "displayName": "wc-bottomCard",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "title": {
       "type": "string"
     },
-    "text": {
+    "description": {
+      "type": "text"
+    },
+    "cta": {
       "type": "string"
     },
-    "imageUrl": {
+    "backgroundDesk": {
       "type": "string"
     },
-    "btnCta": {
-      "type": "string"
-    },
-    "link": {
+    "backgroundMob": {
       "type": "string"
     }
   }

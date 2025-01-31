@@ -1,15 +1,17 @@
 {
-  "collectionName": "components_travel_last_cards",
+  "collectionName": "components_wc_wc_cards",
   "info": {
-    "displayName": "lastCard",
-    "description": ""
+    "displayName": "wc-cards"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "btnCta": {
+    "description": {
+      "type": "text"
+    },
+    "image": {
       "type": "string"
     },
     "link": {
