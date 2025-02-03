@@ -1,15 +1,14 @@
 {
-  "collectionName": "components_about_us_overviews",
+  "collectionName": "components_pmfby_home_ev_sections",
   "info": {
-    "displayName": "overview",
-    "description": ""
+    "displayName": "evSections"
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "description": {
+    "desc": {
       "type": "text"
     }
   }
