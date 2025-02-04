@@ -61,7 +61,7 @@
       "type": "string"
     },
     "disclaimer": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
