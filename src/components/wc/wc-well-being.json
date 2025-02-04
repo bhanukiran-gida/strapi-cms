@@ -18,6 +18,12 @@
     "image": {
       "type": "string"
     },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "wc.cards"
+    },
     "titlePrefix": {
       "type": "string"
     }
