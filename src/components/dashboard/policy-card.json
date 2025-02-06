@@ -1,7 +1,8 @@
 {
   "collectionName": "components_dashboard_policy_cards",
   "info": {
-    "displayName": "policyCard"
+    "displayName": "policyCard",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -24,54 +25,12 @@
       "required": true,
       "component": "dashboard.actions"
     },
-    "health": {
-      "displayName": "policyCardImage",
+    "images": {
+      "displayName": "images",
       "type": "component",
       "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "motor": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "twoWheeler": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "cyber": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "travel": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "pets": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
-    },
-    "home": {
-      "displayName": "policyCardImage",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "dashboard.policy-card-image"
+      "component": "dashboard.images",
+      "required": true
     }
   }
 }
