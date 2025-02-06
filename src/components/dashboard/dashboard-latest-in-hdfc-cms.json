@@ -22,7 +22,7 @@
       "displayName": "cardsLatest",
       "type": "component",
       "required": true,
-      "repeatable": false,
+      "repeatable": true,
       "component": "dashboard.cards-latest"
     }
   }
