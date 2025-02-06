@@ -29,6 +29,10 @@
     "buttontext": {
       "type": "string",
       "required": true
+    },
+    "img": {
+      "type": "string",
+      "required": true
     }
   }
 }
