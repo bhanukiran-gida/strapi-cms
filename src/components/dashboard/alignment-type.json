@@ -15,6 +15,22 @@
       "repeatable": false,
       "component": "dashboard.desktop-alignment",
       "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "resumeJourney",
+        "needsYourAttention",
+        "policy",
+        "actions",
+        "support",
+        "latest",
+        "buyNewInsurance",
+        "locateServices",
+        "promotionalBanner",
+        "contact"
+      ]
     }
   }
 }
