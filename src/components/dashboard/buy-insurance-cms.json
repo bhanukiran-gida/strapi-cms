@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_dashboard_buy_insurance_cms_s",
+  "info": {
+    "displayName": "buyInsuranceCms",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "viewmore": {
+      "type": "string",
+      "required": true
+    },
+    "viewless": {
+      "type": "string",
+      "required": true
+    },
+    "initialCardsToShow": {
+      "type": "integer",
+      "required": true
+    },
+    "cards": {
+      "displayName": "buyInsuranceCards2",
+      "type": "component",
+      "repeatable": true,
+      "component": "dashboard.buy-insurance-cards2",
+      "required": true
+    }
+  }
+}
