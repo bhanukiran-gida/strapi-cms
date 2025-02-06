@@ -28,6 +28,13 @@
       "repeatable": true,
       "component": "dashboard.buy-insurance-cards2",
       "required": true
+    },
+    "viewall": {
+      "displayName": "viewall",
+      "type": "component",
+      "repeatable": false,
+      "component": "dashboard.viewall",
+      "required": true
     }
   }
 }
