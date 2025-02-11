@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_bmi_calculator_cards",
+  "collectionName": "components_pdp_know_your_coverage_more_questions",
   "info": {
-    "displayName": "cards",
+    "displayName": "moreQuestions",
     "description": ""
   },
   "options": {},
@@ -14,8 +14,12 @@
       "type": "text",
       "required": true
     },
-    "image": {
+    "cta": {
       "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "text",
       "required": true
     }
   }

@@ -69,7 +69,7 @@
     },
     "dividerOne": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "car-insurance.divider-one",
       "required": true,
       "min": 1
