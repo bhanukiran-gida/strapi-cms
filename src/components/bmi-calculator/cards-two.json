@@ -15,7 +15,7 @@
       "required": true
     },
     "desc": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "points": {
@@ -23,8 +23,7 @@
       "type": "component",
       "repeatable": true,
       "component": "bmi-calculator.points-three",
-      "required": true,
-      "min": 1
+      "required": false
     }
   }
 }

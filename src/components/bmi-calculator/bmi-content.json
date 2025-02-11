@@ -15,7 +15,7 @@
     },
     "kids": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "bmi-calculator.formula",
       "required": true,
       "min": 1
