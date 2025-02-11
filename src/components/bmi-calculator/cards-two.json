@@ -23,8 +23,7 @@
       "type": "component",
       "repeatable": true,
       "component": "bmi-calculator.points-three",
-      "required": true,
-      "min": 1
+      "required": false
     }
   }
 }

@@ -13,7 +13,7 @@
     "desc": {
       "displayName": "desc",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "bmi-calculator.desc",
       "required": true,
       "min": 1
