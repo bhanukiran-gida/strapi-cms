@@ -34,6 +34,12 @@
       "repeatable": true,
       "component": "portal-topbar.account-options",
       "required": true
+    },
+    "loginButtonClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }
