@@ -16,15 +16,6 @@
       "type": "uid",
       "required": true
     },
-    "heading": {
-      "displayName": "heading",
-      "type": "component",
-      "repeatable": false,
-      "component": "claims-section.heading"
-    },
-    "subheading": {
-      "type": "text"
-    },
     "infoCont": {
       "displayName": "infoCont",
       "type": "component",
@@ -46,6 +37,21 @@
         "claims-section.claim-section",
         "claims-section.claim-documentation-section"
       ]
+    },
+    "banner": {
+      "type": "component",
+      "repeatable": false,
+      "component": "claims-section.banner"
+    },
+    "crumbs": {
+      "displayName": "crumbs",
+      "type": "component",
+      "repeatable": true,
+      "component": "claims-section.crumbs"
+    },
+    "title": {
+      "type": "richtext",
+      "required": true
     }
   }
 }

@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "claimDocumentationHeading": {
+    "tabTitle": {
       "type": "string"
     },
     "claimDocumentation": {
