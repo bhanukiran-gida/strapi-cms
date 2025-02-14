@@ -1,29 +1,29 @@
 {
-  "collectionName": "components_pdp_pdp_bike_insurance_premium_rates",
-  "info": {
-    "displayName": "Pdp-TitleWithTable",
-    "description": ""
-  },
-  "options": {},
-  "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "desc": {
-      "type": "richtext"
-    },
-    "tableData": {
-      "type": "component",
-      "repeatable": true,
-      "component": "pdp.compare-policy-section"
-    },
-    "type": {
-      "type": "enumeration",
-      "enum": [
-        "pdp-title-with-table"
-      ],
-      "default": "pdp-title-with-table",
-      "required": true
-    }
-  }
+	"collectionName": "components_pdp_pdp_bike_insurance_premium_rates",
+	"info": {
+		"displayName": "Pdp-TitleWithTable",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string"
+		},
+		"desc": {
+			"type": "richtext",
+			"required": true
+		},
+		"type": {
+			"type": "enumeration",
+			"enum": ["pdp-title-with-table"],
+			"default": "pdp-title-with-table",
+			"required": true
+		},
+		"table": {
+			"type": "component",
+			"repeatable": false,
+			"component": "pdp.pdp-table",
+			"required": true
+		}
+	}
 }
