@@ -1,15 +1,11 @@
 {
-  "collectionName": "components_finance_pdfs",
+  "collectionName": "components_title_with_links_links",
   "info": {
-    "displayName": "pdfs",
+    "displayName": "links",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "icon": {
-      "type": "string",
-      "required": true
-    },
     "title": {
       "type": "string",
       "required": true
