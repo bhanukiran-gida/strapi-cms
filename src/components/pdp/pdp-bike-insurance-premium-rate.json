@@ -20,9 +20,9 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "pdp-bike-insurance-premium"
+        "pdp-title-with-table"
       ],
-      "default": "pdp-bike-insurance-premium",
+      "default": "pdp-title-with-table",
       "required": true
     }
   }
