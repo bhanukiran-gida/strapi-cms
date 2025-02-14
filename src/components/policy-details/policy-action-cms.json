@@ -57,13 +57,13 @@
     },
     "expiredCards": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "policy-details.policy-action-cards",
       "required": true
     },
     "upcomingPolicyCards": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "policy-details.policy-action-cards",
       "required": true
     }
