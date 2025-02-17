@@ -1,12 +1,12 @@
 {
-  "collectionName": "components_calc_idp_included_points",
+  "collectionName": "components_customer_reviews_sections",
   "info": {
-    "displayName": "idp-includedPoints",
+    "displayName": "section",
     "description": ""
   },
   "options": {},
   "attributes": {
-    "icon": {
+    "imageUrl": {
       "type": "string",
       "required": true
     },
@@ -15,6 +15,9 @@
       "required": true
     },
     "description": {
+      "type": "string"
+    },
+    "redirectionLink": {
       "type": "string",
       "required": true
     }
