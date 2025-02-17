@@ -54,6 +54,7 @@
 			"displayName": "termsAndConditions",
 			"type": "component",
 			"repeatable": false,
+			"required": true,
 			"component": "health-insurance-form.terms-and-conditions"
 		},
 		"type": {
