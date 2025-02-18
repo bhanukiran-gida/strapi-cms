@@ -30,13 +30,13 @@
       "repeatable": false,
       "component": "shared.clevertap-button-event"
     },
-    "secondaruButtonTextClevertapEvent": {
+    "secondaryButtonTextClevertapEvent": {
       "displayName": "ClevertapButtonEvent",
       "type": "component",
       "repeatable": false,
       "component": "shared.clevertap-button-event"
     },
-    "secondaruButtonText": {
+    "secondaryButtonText": {
       "type": "string"
     }
   }
