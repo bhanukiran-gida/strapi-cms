@@ -28,7 +28,8 @@
       "required": true
     },
     "desc": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": false
     },
     "cta": {
       "type": "string"
