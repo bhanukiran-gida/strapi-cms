@@ -11,13 +11,15 @@
     },
     "minIdvLabel": {
       "type": "string",
-      "required": false
+      "required": true
     },
     "recommendedLabel": {
-      "type": "string"
+      "type": "string",
+       "required": true
     },
     "maxIdvLabel": {
-      "type": "string"
-    }
+			"type": "string",
+			"required": true
+		}
   }
 }

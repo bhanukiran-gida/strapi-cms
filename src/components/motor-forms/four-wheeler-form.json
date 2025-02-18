@@ -22,18 +22,21 @@
       "displayName": "cityLabel",
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "motor-forms.city-label"
     },
-    "vehicleRegistrationInputLabels": {
+    "vehicleRegistrationNoLabels": {
       "displayName": "vehicleRegistrationInputLabels",
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "motor-forms.vehicle-registration-input-labels"
     },
-    "mobileNumberInputLabels": {
+    "mobileNoLabels": {
       "displayName": "mobileNumberInputLabels",
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "motor-forms.mobile-number-input-labels"
     },
     "getQuoteCtaLabel": {
@@ -44,13 +47,17 @@
       "displayName": "termsAndConditions",
       "type": "component",
       "repeatable": true,
+      "required": true,
+      "max": 2,
+      "min": 1,
       "component": "motor-forms.terms-and-conditions"
     },
     "policyDetails": {
-      "displayName": "policyDetails",
-      "type": "component",
-      "repeatable": false,
-      "component": "motor-forms.policy-details"
-    }
+			"displayName": "policyDetails",
+			"type": "component",
+			"repeatable": false,
+			"required": true,
+			"component": "motor-forms.policy-details"
+		}
   }
 }
