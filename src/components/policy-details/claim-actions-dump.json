@@ -14,7 +14,7 @@
       "type": "string",
       "required": true
     },
-    "motoractions": {
+    "motorActions": {
       "displayName": "claimactions-cards",
       "type": "component",
       "repeatable": true,
@@ -22,6 +22,12 @@
       "required": true
     },
     "healthActions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "policy-details.claimactions-cards",
+      "required": true
+    },
+    "travelActions": {
       "type": "component",
       "repeatable": true,
       "component": "policy-details.claimactions-cards",
