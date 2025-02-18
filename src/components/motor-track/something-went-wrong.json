@@ -14,6 +14,12 @@
     "primaryButtonText": {
       "type": "string"
     },
+    "primaryButtonTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "imageUrl": {
       "type": "string"
     },
