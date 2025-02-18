@@ -17,8 +17,20 @@
     "skipLabel": {
       "type": "string"
     },
+    "skipLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "homeLabel": {
       "type": "string"
+    },
+    "homeLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }

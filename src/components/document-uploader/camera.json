@@ -13,6 +13,12 @@
     },
     "submit": {
       "type": "string"
+    },
+    "submitClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }
