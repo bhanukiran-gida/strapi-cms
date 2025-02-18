@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_policy_details_modal_contents",
+  "info": {
+    "displayName": "modalContent"
+  },
+  "options": {},
+  "attributes": {
+    "subscribeLabel": {
+      "type": "string",
+      "required": true
+    },
+    "subscribeDesc": {
+      "type": "text",
+      "required": true
+    },
+    "alreadySubscribedLabel": {
+      "type": "string",
+      "required": true
+    },
+    "alreadySubscribedDesc": {
+      "type": "text",
+      "required": true
+    },
+    "buttonText": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

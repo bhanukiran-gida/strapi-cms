@@ -15,6 +15,15 @@
     "imageUrl": {
       "type": "string"
     },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "modes": {
       "displayName": "modes",
       "type": "component",

@@ -107,6 +107,11 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::old-article.old-article"
+    },
+    "isTopRated": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

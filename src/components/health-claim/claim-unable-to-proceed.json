@@ -17,6 +17,12 @@
     "retryLabel": {
       "type": "string"
     },
+    "retryLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "queryWidget": {
       "type": "component",
       "repeatable": false,

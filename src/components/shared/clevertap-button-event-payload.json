@@ -18,7 +18,11 @@
         "user-mobile-with-code",
         "selected-policy-id",
         "selected-policy-no",
-        "selected-policy-holder-name"
+        "selected-policy-holder-name",
+        "selected-claim-id",
+        "selected-claim-no",
+        "selected-claim-policy-id",
+        "selected-claim-policy-no"
       ],
       "required": true
     }

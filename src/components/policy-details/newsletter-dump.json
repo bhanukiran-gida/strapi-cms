@@ -1,7 +1,8 @@
 {
   "collectionName": "components_policy_details_newsletter_dumps",
   "info": {
-    "displayName": "newsletterDump"
+    "displayName": "newsletterDump",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -37,6 +38,13 @@
     },
     "paperPlaneImageUrl": {
       "type": "string",
+      "required": true
+    },
+    "modalContent": {
+      "displayName": "modalContent",
+      "type": "component",
+      "repeatable": false,
+      "component": "policy-details.modal-content",
       "required": true
     }
   }

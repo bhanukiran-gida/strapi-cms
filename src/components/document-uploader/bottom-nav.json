@@ -8,8 +8,20 @@
     "btnLabel": {
       "type": "string"
     },
+    "btnLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "secondaryText": {
       "type": "string"
+    },
+    "secondaryTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }

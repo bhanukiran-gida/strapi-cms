@@ -19,6 +19,12 @@
     },
     "retryPayment": {
       "type": "string"
+    },
+    "retryPaymentClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }
