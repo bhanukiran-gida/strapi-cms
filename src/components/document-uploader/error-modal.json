@@ -14,6 +14,12 @@
     "emailLabel": {
       "type": "string"
     },
+    "emailLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "skipLabel": {
       "type": "string"
     },

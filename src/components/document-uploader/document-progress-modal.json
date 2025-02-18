@@ -23,15 +23,6 @@
       "repeatable": false,
       "component": "shared.clevertap-button-event"
     },
-    "selectLabel": {
-      "type": "string"
-    },
-    "selectLabelClevertapEvent": {
-      "displayName": "ClevertapButtonEvent",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.clevertap-button-event"
-    },
     "selectFileLabel": {
       "type": "string"
     },
