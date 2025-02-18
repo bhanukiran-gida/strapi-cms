@@ -1,16 +1,15 @@
 {
-  "collectionName": "components_calc_idp_plan_for_titles",
+  "collectionName": "components_pdp_cta_sections",
   "info": {
-    "displayName": "idp-planForTitle",
-    "description": ""
+    "displayName": "ctaSection"
   },
   "options": {},
   "attributes": {
-    "t1": {
+    "cta": {
       "type": "string",
       "required": true
     },
-    "t2": {
+    "ctaLink": {
       "type": "string",
       "required": true
     }

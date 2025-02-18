@@ -1,21 +1,26 @@
 {
   "collectionName": "components_pdp_fw_expert_cards",
   "info": {
-    "displayName": "fw-expertCards"
+    "displayName": "fw-expertCards",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "iconPath": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "href": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "mobileNo": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

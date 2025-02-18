@@ -1,15 +1,18 @@
 {
   "collectionName": "components_pdp_fw_points",
   "info": {
-    "displayName": "fw-points"
+    "displayName": "fw-points",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "url": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
