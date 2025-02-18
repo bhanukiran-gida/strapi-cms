@@ -93,6 +93,12 @@
       "type": "string",
       "required": true,
       "default": "dashboard-page"
+    },
+    "newsletterDump": {
+      "type": "component",
+      "repeatable": true,
+      "component": "policy-details.newsletter-dump",
+      "required": true
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_dashboard_locate_services_s",
   "info": {
-    "displayName": "locateServices "
+    "displayName": "locateServices ",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -23,6 +24,11 @@
     },
     "redirectUrl": {
       "type": "string",
+      "required": true
+    },
+    "showCard": {
+      "type": "boolean",
+      "default": true,
       "required": true
     }
   }
