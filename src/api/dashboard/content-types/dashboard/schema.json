@@ -96,7 +96,7 @@
     },
     "newsletterDump": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "policy-details.newsletter-dump",
       "required": true
     }
