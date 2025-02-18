@@ -61,6 +61,11 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "old_articles"
+    },
+    "isTopRated": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
