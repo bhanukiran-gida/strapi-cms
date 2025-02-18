@@ -6,6 +6,15 @@
   },
   "options": {},
   "attributes": {
+    "buttonLabel": {
+      "type": "string"
+    },
+    "buttonLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "selectClaim": {
       "displayName": "selectClaim",
       "type": "component",

@@ -17,8 +17,20 @@
     "confirm": {
       "type": "string"
     },
+    "confirmClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "cancel": {
       "type": "string"
+    },
+    "cancelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }
