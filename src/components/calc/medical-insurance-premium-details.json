@@ -7,16 +7,19 @@
   "options": {},
   "attributes": {
     "titleStart": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "titleEnd": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "premiumCtaLabel": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "type": {
       "type": "enumeration",
