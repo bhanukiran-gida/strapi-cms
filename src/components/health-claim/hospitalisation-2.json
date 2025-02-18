@@ -1,19 +1,10 @@
 {
-  "collectionName": "components_motor_claim_motor_claim_pages",
+  "collectionName": "components_health_claim_hospitalisation_2s",
   "info": {
-    "displayName": "motorClaimPage"
+    "displayName": "hospitalisation-2"
   },
   "options": {},
   "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "subtitle": {
-      "type": "string"
-    },
-    "stepLabel": {
-      "type": "string"
-    },
     "buttonLabel": {
       "type": "string"
     },
