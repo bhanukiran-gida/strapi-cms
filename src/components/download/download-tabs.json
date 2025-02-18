@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_download_download_tabs",
+  "info": {
+    "displayName": "downloadTabs",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true
+    },
+    "icon": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "enumeration",
+      "enum": [
+        "brochure",
+        "cis",
+        "claim-forms",
+        "others",
+        "proposal-forms",
+        "policy-wordings",
+        "prospectus"
+      ],
+      "required": true
+    }
+  }
+}

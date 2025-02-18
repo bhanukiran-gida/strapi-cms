@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_customer_reviews_sections",
+  "info": {
+    "displayName": "section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "imageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "redirectionLink": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

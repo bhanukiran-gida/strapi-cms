@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_pdp_cta_sections",
+  "info": {
+    "displayName": "ctaSection"
+  },
+  "options": {},
+  "attributes": {
+    "cta": {
+      "type": "string",
+      "required": true
+    },
+    "ctaLink": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -116,6 +116,12 @@
       "type": "string",
       "required": true,
       "default": "quick-action-page"
+    },
+    "actionsClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_calc_tips_and_tricks_cards",
+  "info": {
+    "displayName": "cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "points": {
+      "type": "component",
+      "repeatable": true,
+      "component": "calc-tips-and-tricks.points"
+    },
+    "title": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
