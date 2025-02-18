@@ -11,6 +11,12 @@
     "retake": {
       "type": "string"
     },
+    "retakeClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "submit": {
       "type": "string"
     },
