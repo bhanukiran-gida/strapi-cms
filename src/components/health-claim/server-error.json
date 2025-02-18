@@ -8,6 +8,12 @@
     "okayLabel": {
       "type": "string"
     },
+    "okayLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "imageUrl": {
       "type": "string"
     },

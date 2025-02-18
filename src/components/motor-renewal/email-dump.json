@@ -24,8 +24,20 @@
     "primaryButtonText": {
       "type": "string"
     },
-    "secondaruButtonText": {
+    "secondaryButtonText": {
       "type": "string"
+    },
+    "primaryButtonTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
+    "secondaryButtonTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }

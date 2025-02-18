@@ -11,6 +11,12 @@
     "buttonText": {
       "type": "string"
     },
+    "buttonTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "editText": {
       "type": "string"
     },

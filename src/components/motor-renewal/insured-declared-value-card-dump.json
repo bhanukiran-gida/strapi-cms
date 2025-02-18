@@ -20,6 +20,12 @@
     "proceedText": {
       "type": "string"
     },
+    "proceedTextClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "iDVMinText": {
       "type": "string"
     },

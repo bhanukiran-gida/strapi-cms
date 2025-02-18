@@ -30,7 +30,7 @@
       "repeatable": false,
       "component": "health-claim.track-card"
     },
-    "hospitalisation": {
+    "failedClaimRegistration": {
       "type": "component",
       "repeatable": false,
       "component": "health-claim.title-img-and-desc"
@@ -79,6 +79,12 @@
       "type": "string",
       "required": true,
       "default": "health-claim-page"
+    },
+    "hospitalisation": {
+      "displayName": "hospitalisation-2",
+      "type": "component",
+      "repeatable": false,
+      "component": "health-claim.hospitalisation-2"
     }
   }
 }

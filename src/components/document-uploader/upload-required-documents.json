@@ -38,6 +38,12 @@
     },
     "uploadLabel": {
       "type": "string"
+    },
+    "uploadLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
     }
   }
 }
