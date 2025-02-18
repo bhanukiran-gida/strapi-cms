@@ -30,6 +30,22 @@
     "desktopIcon": {
       "type": "string",
       "required": true
+    },
+    "healthLink": {
+      "type": "string",
+      "required": true
+    },
+    "motorLink": {
+      "type": "string",
+      "required": true
+    },
+    "twoWheelerLink": {
+      "type": "string",
+      "required": true
+    },
+    "travelLink": {
+      "type": "string",
+      "required": true
     }
   }
 }
