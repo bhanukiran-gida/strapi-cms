@@ -1,7 +1,7 @@
 {
   "collectionName": "components_motor_forms_four_wheeler_forms",
   "info": {
-    "displayName": "FourWheelerForm",
+    "displayName": "motorForm",
     "description": ""
   },
   "options": {},
@@ -22,7 +22,7 @@
       "displayName": "cityLabel",
       "type": "component",
       "repeatable": false,
-      "required": true,
+      "required": false,
       "component": "motor-forms.city-label"
     },
     "vehicleRegistrationNoLabels": {
@@ -53,11 +53,11 @@
       "component": "motor-forms.terms-and-conditions"
     },
     "policyDetails": {
-			"displayName": "policyDetails",
-			"type": "component",
-			"repeatable": false,
-			"required": true,
-			"component": "motor-forms.policy-details"
-		}
+      "displayName": "policyDetails",
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "motor-forms.policy-details"
+    }
   }
 }
