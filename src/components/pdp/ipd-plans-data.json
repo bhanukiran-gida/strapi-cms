@@ -1,7 +1,8 @@
 {
   "collectionName": "components_pdp_ipd_plans_data",
   "info": {
-    "displayName": "ipd-plansData"
+    "displayName": "ipd-plansData",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -30,6 +31,12 @@
       "type": "string"
     },
     "buyNowCtaLabel": {
+      "type": "string"
+    },
+    "exploreCtaLink": {
+      "type": "string"
+    },
+    "buyNowCtaLink": {
       "type": "string"
     }
   }
