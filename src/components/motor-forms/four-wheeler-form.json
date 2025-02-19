@@ -62,7 +62,8 @@
     "type": {
       "type": "enumeration",
       "enum": [
-        "fourWheeler"
+        "fourWheeler",
+        "twoWheeler"
       ],
       "default": "fourWheeler",
       "required": true
