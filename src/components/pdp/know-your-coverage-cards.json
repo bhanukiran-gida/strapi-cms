@@ -11,7 +11,7 @@
       "required": false
     },
     "desc": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     }
   }

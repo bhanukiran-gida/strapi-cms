@@ -27,6 +27,14 @@
       "type": "component",
       "repeatable": false,
       "component": "pdp.pdp-table"
+    },
+    "noteCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pdp.pdp-note-section"
+    },
+    "bottomDesc": {
+      "type": "richtext"
     }
   }
 }
