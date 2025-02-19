@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "grievance_pages",
+  "info": {
+    "singularName": "grievance-page",
+    "pluralName": "grievance-pages",
+    "displayName": "grievancePage",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "data": {
+      "displayName": "data",
+      "type": "component",
+      "repeatable": false,
+      "component": "grievance-page.data",
+      "required": true
+    }
+  }
+}

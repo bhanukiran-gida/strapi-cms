@@ -1,18 +1,20 @@
 {
-  "collectionName": "components_car_insurance_premium_calculator_details",
-  "info": {
-    "displayName": "premiumCalculatorDetails"
-  },
-  "options": {},
-  "attributes": {
-    "imageUrl": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string"
-    }
-  }
+	"collectionName": "components_car_insurance_premium_calculator_details",
+	"info": {
+		"displayName": "premiumCalculatorDetails"
+	},
+	"options": {},
+	"attributes": {
+		"imageUrl": {
+			"type": "string"
+		},
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "string",
+			"required": true
+		}
+	}
 }

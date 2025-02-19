@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_grievance_page_cards",
+  "info": {
+    "displayName": "cards",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "value": {
+      "type": "richtext",
+      "required": true
+    },
+    "icon": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

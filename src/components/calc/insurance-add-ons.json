@@ -21,9 +21,6 @@
       "component": "calc-insurance-add-ons.cards",
       "required": true
     },
-    "gridCount": {
-      "type": "string"
-    },
     "type": {
       "type": "enumeration",
       "enum": [
@@ -31,6 +28,9 @@
       ],
       "default": "calc-insurance-add-ons",
       "required": true
+    },
+    "gridCount": {
+      "type": "integer"
     }
   }
 }
