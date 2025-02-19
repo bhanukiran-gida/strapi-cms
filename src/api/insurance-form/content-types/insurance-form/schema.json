@@ -20,7 +20,6 @@
     "insuranceForms": {
       "type": "dynamiczone",
       "components": [
-        "motor-forms.two-wheeler-form",
         "motor-forms.four-wheeler-form",
         "health-insurance-form.health-insurance-form"
       ],

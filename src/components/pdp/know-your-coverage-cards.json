@@ -8,10 +8,10 @@
   "attributes": {
     "title": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "desc": {
-      "type": "text",
+      "type": "richtext",
       "required": true
     }
   }
