@@ -6,6 +6,11 @@
   },
   "options": {},
   "attributes": {
+    "showCard": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
     "title": {
       "type": "string",
       "required": true
