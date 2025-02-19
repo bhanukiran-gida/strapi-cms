@@ -54,15 +54,17 @@
       "displayName": "termsAndConditions",
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "health-insurance-form.terms-and-conditions"
     },
     "type": {
       "type": "enumeration",
       "enum": [
-        "healthForm"
+        "healthForm",
+        "twoWheeler",
+        "fourWheeler"
       ],
-      "required": true,
-      "default": "healthForm"
+      "required": true
     }
   }
 }

@@ -13,19 +13,15 @@
     "planType": {
       "type": "component",
       "repeatable": false,
+      "required": true,
       "component": "motor-forms.plan-type"
-    },
-    "vehicleDetails": {
-      "displayName": "vehicleDetails",
-      "type": "component",
-      "repeatable": false,
-      "component": "motor-forms.vehicle-details"
-    },
+    },        
     "Idv": {
-      "type": "component",
-      "repeatable": false,
-      "component": "motor-forms.idv"
-    },
+			"type": "component",
+			"repeatable": false,
+			"required": true,
+			"component": "motor-forms.idv"
+		},
     "totalPremiumLabel": {
       "type": "string",
       "required": true
