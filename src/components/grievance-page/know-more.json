@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_grievance_page_know_mores",
+  "info": {
+    "displayName": "knowMore",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "cta": {
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
