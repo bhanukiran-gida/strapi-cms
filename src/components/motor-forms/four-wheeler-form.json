@@ -52,14 +52,7 @@
       "min": 1,
       "component": "motor-forms.terms-and-conditions"
     },
-    "policyDetails": {
-      "displayName": "policyDetails",
-      "type": "component",
-      "repeatable": false,
-      "required": true,
-      "component": "motor-forms.policy-details"
-    },
-    "type": {
+     "type": {
       "type": "enumeration",
       "enum": [
         "fourWheeler",
@@ -67,6 +60,13 @@
       ],
       "default": "fourWheeler",
       "required": true
+    },
+    "policyDetails": {
+      "displayName": "policyDetails",
+      "type": "component",
+      "repeatable": false,
+      "required": true,
+      "component": "motor-forms.policy-details"
     }
   }
 }
