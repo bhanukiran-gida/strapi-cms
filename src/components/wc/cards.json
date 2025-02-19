@@ -6,22 +6,28 @@
 	"options": {},
 	"attributes": {
 		"title": {
-			"type": "string"
+			"type": "string",
+			"required": true
 		},
 		"description": {
-			"type": "text"
+			"type": "text",
+			"required": true
 		},
 		"cta": {
-			"type": "string"
+			"type": "string",
+			"required": true
 		},
 		"image": {
-			"type": "string"
+			"type": "string",
+			"required": true
 		},
 		"bgColor": {
-			"type": "string"
+			"type": "string",
+			"required": true
 		},
 		"link": {
-			"type": "string"
+			"type": "string",
+			"required": true
 		}
 	}
 }

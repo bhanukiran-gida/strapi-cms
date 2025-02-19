@@ -1,16 +1,17 @@
 {
-  "collectionName": "components_wc_titles",
-  "info": {
-    "displayName": "title"
-  },
-  "options": {},
-  "attributes": {
-    "left": {
-      "type": "string"
-    },
-    "right": {
-      "type": "string",
-      "required": true
-    }
-  }
+	"collectionName": "components_wc_titles",
+	"info": {
+		"displayName": "title"
+	},
+	"options": {},
+	"attributes": {
+		"left": {
+			"type": "string",
+			"required": true
+		},
+		"right": {
+			"type": "string",
+			"required": true
+		}
+	}
 }

@@ -1,17 +1,18 @@
 {
-  "collectionName": "components_wc_wc_disclaimers",
-  "info": {
-    "displayName": "wc-disclaimer",
-    "description": ""
-  },
-  "options": {},
-  "attributes": {
-    "bottom": {
-      "type": "text"
-    },
-    "top": {
-      "type": "richtext",
-      "required": true
-    }
-  }
+	"collectionName": "components_wc_wc_disclaimers",
+	"info": {
+		"displayName": "wc-disclaimer",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"bottom": {
+			"type": "text",
+			"required": true
+		},
+		"top": {
+			"type": "richtext",
+			"required": true
+		}
+	}
 }

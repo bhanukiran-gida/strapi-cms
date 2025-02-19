@@ -1,29 +1,33 @@
 {
-  "collectionName": "components_wc_wc_well_beings",
-  "info": {
-    "displayName": "wc-wellBeing",
-    "description": ""
-  },
-  "options": {},
-  "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "image": {
-      "type": "string"
-    },
-    "cards": {
-      "displayName": "cards",
-      "type": "component",
-      "repeatable": true,
-      "component": "wc.cards"
-    },
-    "titlePrefix": {
-      "type": "string"
-    },
-    "description": {
-      "type": "richtext",
-      "required": true
-    }
-  }
+	"collectionName": "components_wc_wc_well_beings",
+	"info": {
+		"displayName": "wc-wellBeing",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"image": {
+			"type": "string",
+			"required": true
+		},
+		"cards": {
+			"displayName": "cards",
+			"type": "component",
+			"repeatable": true,
+			"component": "wc.cards",
+			"required": true
+		},
+		"titlePrefix": {
+			"type": "string",
+			"required": true
+		},
+		"description": {
+			"type": "richtext",
+			"required": true
+		}
+	}
 }

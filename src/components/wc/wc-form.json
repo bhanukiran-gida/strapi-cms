@@ -1,52 +1,65 @@
 {
-  "collectionName": "components_wc_wc_forms",
-  "info": {
-    "displayName": "wc-form",
-    "description": ""
-  },
-  "options": {},
-  "attributes": {
-    "title": {
-      "type": "text"
-    },
-    "description": {
-      "type": "text"
-    },
-    "nameLabel": {
-      "type": "string"
-    },
-    "namePlaceholder": {
-      "type": "string"
-    },
-    "emailLabel": {
-      "type": "string"
-    },
-    "emailPlaceholder": {
-      "type": "string"
-    },
-    "phoneLabel": {
-      "type": "string"
-    },
-    "phonePlaceholder": {
-      "type": "string"
-    },
-    "declaration": {
-      "type": "text"
-    },
-    "cta": {
-      "type": "string"
-    },
-    "image": {
-      "type": "string"
-    },
-    "findYourTopic": {
-      "type": "string"
-    },
-    "tabs": {
-      "displayName": "tabs",
-      "type": "component",
-      "repeatable": true,
-      "component": "wc.tabs"
-    }
-  }
+	"collectionName": "components_wc_wc_forms",
+	"info": {
+		"displayName": "wc-form",
+		"description": ""
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "text",
+			"required": true
+		},
+		"description": {
+			"type": "text",
+			"required": true
+		},
+		"nameLabel": {
+			"type": "string",
+			"required": true
+		},
+		"namePlaceholder": {
+			"type": "string",
+			"required": true
+		},
+		"emailLabel": {
+			"type": "string",
+			"required": true
+		},
+		"emailPlaceholder": {
+			"type": "string",
+			"required": true
+		},
+		"phoneLabel": {
+			"type": "string",
+			"required": true
+		},
+		"phonePlaceholder": {
+			"type": "string",
+			"required": true
+		},
+		"declaration": {
+			"type": "text",
+			"required": true
+		},
+		"cta": {
+			"type": "string",
+			"required": true
+		},
+		"image": {
+			"type": "string",
+			"required": true
+		},
+		"findYourTopic": {
+			"type": "string",
+			"required": true
+		},
+		"tabs": {
+			"displayName": "tabs",
+			"type": "component",
+			"repeatable": true,
+			"component": "wc.tabs",
+			"required": true
+		}
+	}
 }

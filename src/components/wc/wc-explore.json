@@ -1,27 +1,32 @@
 {
-  "collectionName": "components_wc_wc_explores",
-  "info": {
-    "displayName": "wc-explore"
-  },
-  "options": {},
-  "attributes": {
-    "title": {
-      "type": "string"
-    },
-    "viewAll": {
-      "type": "string"
-    },
-    "viewAllLink": {
-      "type": "string"
-    },
-    "viewsLabel": {
-      "type": "string"
-    },
-    "stories": {
-      "displayName": "stories",
-      "type": "component",
-      "repeatable": true,
-      "component": "wc.stories"
-    }
-  }
+	"collectionName": "components_wc_wc_explores",
+	"info": {
+		"displayName": "wc-explore"
+	},
+	"options": {},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"required": true
+		},
+		"viewAll": {
+			"type": "string",
+			"required": true
+		},
+		"viewAllLink": {
+			"type": "string",
+			"required": true
+		},
+		"viewsLabel": {
+			"type": "string",
+			"required": true
+		},
+		"stories": {
+			"displayName": "stories",
+			"type": "component",
+			"repeatable": true,
+			"component": "wc.stories",
+			"required": true
+		}
+	}
 }
