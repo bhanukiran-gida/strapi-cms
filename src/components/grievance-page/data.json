@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_grievance_page_data",
+  "info": {
+    "displayName": "data",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "banner": {
+      "displayName": "banner",
+      "type": "component",
+      "repeatable": false,
+      "component": "grievance-page.banner",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "title": {
+      "type": "richtext",
+      "required": true
+    },
+    "cards": {
+      "displayName": "cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "grievance-page.cards",
+      "required": true
+    },
+    "info": {
+      "type": "richtext",
+      "required": true
+    },
+    "knowMore": {
+      "displayName": "knowMore",
+      "type": "component",
+      "repeatable": false,
+      "component": "grievance-page.know-more",
+      "required": true
+    },
+    "levelTitle": {
+      "type": "text",
+      "required": true
+    },
+    "levelCards": {
+      "displayName": "levelCards",
+      "type": "component",
+      "repeatable": true,
+      "component": "grievance-page.level-cards"
+    }
+  }
+}

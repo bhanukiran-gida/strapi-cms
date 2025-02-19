@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_grievance_page_infos",
+  "info": {
+    "displayName": "info"
+  },
+  "options": {},
+  "attributes": {
+    "left": {
+      "type": "text"
+    },
+    "center": {
+      "type": "text"
+    },
+    "right": {
+      "type": "text"
+    }
+  }
+}

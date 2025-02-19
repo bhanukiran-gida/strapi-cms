@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_grievance_page_level_cards",
+  "info": {
+    "displayName": "levelCards"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "desc": {
+      "type": "richtext",
+      "required": true
+    },
+    "primaryCtaLabel": {
+      "type": "string"
+    },
+    "secondaryCtaLabel": {
+      "type": "string"
+    },
+    "primaryCtaLink": {
+      "type": "string"
+    },
+    "secondaryCtaLink": {
+      "type": "string"
+    }
+  }
+}

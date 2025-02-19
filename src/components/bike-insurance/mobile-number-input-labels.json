@@ -6,13 +6,16 @@
   "options": {},
   "attributes": {
     "label": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "placeholder": {
-      "type": "string"
-    },
-    "verifyLabel": {
-      "type": "string"
+			"type": "string",
+			"required": true
+		},
+    "verifyCtaLabel": {
+      "type": "string",
+      "required": true
     }
   }
 }
