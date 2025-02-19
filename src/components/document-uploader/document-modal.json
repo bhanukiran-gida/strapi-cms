@@ -14,6 +14,12 @@
     "cameraLabel": {
       "type": "string"
     },
+    "cameraLabelClevertapEvent": {
+      "displayName": "ClevertapButtonEvent",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.clevertap-button-event"
+    },
     "uploadFileLabel": {
       "type": "string"
     }
